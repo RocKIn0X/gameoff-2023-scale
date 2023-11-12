@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccxnlbpb51cve"]
+
+[ext_resource type="Script" path="res://Scripts/scale_remover.gd" id="1_pklt3"]
+[ext_resource type="Texture2D" uid="uid://dw82baymjmuvy" path="res://Sources/Sprites/ScaleRemovers/knife.png" id="1_vdjxa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2igi5"]
+size = Vector2(20, 10.6667)
+
+[node name="ScaleRemover" type="Area2D"]
+script = ExtResource("1_pklt3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4.76837e-07)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_2igi5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_vdjxa")

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1plbnxnqxtwb"]
+
+[ext_resource type="PackedScene" uid="uid://dutvhlafcne2p" path="res://Scenes/fish.tscn" id="1_m2g1p"]
+[ext_resource type="PackedScene" uid="uid://ccxnlbpb51cve" path="res://Scenes/scale_remover.tscn" id="2_52a01"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Fish" parent="." instance=ExtResource("1_m2g1p")]
+position = Vector2(536, 408)
+
+[node name="ScaleRemover" parent="." instance=ExtResource("2_52a01")]
+position = Vector2(289.775, 209.902)
