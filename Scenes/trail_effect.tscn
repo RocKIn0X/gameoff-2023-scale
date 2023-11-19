@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0rlm0qh78tmx"]
+
+[ext_resource type="Script" path="res://Scripts/trail.gd" id="1_vwuoc"]
+
+[sub_resource type="Curve" id="Curve_8hm61"]
+_data = [Vector2(0, 0), 0.0, 3.05195, 0, 1, Vector2(0.28972, 0.88421), 0.543739, 0.543739, 0, 0, Vector2(0.995327, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_4sy64"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.139073, 0.350993, 0.576159, 0.81457, 1)
+colors = PackedColorArray(0, 0, 0.952941, 1, 0, 0.823529, 1, 1, 0, 1, 0, 1, 1, 1, 0.133333, 1, 1, 0.588235, 0, 1, 1, 0, 0, 1)
+
+[node name="TrailEffect" type="Line2D"]
+width_curve = SubResource("Curve_8hm61")
+default_color = Color(1, 0, 0, 1)
+gradient = SubResource("Gradient_4sy64")
+script = ExtResource("1_vwuoc")
+MAX_LENGTH = 20
