@@ -1,76 +1,51 @@
-[gd_scene load_steps=4 format=3 uid="uid://dutvhlafcne2p"]
+[gd_scene load_steps=5 format=3 uid="uid://dutvhlafcne2p"]
 
 [ext_resource type="Script" path="res://Scripts/fish.gd" id="1_jh4lm"]
-[ext_resource type="Texture2D" uid="uid://b6rmh7asfku76" path="res://Sources/Sprites/Fish/1/Models/peixe-listrado-03-md.png" id="1_rjtm4"]
+[ext_resource type="Texture2D" uid="uid://bsgmbtl404laa" path="res://Sources/Sprites/Fish/1/Models/Fish Meat_S01.png" id="2_54tpf"]
 [ext_resource type="PackedScene" uid="uid://c0l6l2wuy01jc" path="res://Scenes/scale.tscn" id="3_lykm3"]
+[ext_resource type="Texture2D" uid="uid://cy8j601l54dxq" path="res://Sources/Sprites/Fish/1/Models/Fish_normal_S01_A1.png" id="3_mqak3"]
 
 [node name="Fish" type="Node2D" node_paths=PackedStringArray("scaleParent")]
 position = Vector2(488, 328)
 script = ExtResource("1_jh4lm")
-scaleParent = NodePath("Scales")
+scaleParent = NodePath("")
+
+[node name="Mask" type="Sprite2D" parent="."]
+clip_children = 2
+texture = ExtResource("2_54tpf")
+
+[node name="Scale" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(-264, 24)
+
+[node name="Scale2" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(-176, 32)
+
+[node name="Scale3" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(-96, 24)
+
+[node name="Scale4" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(-8, 16)
+
+[node name="Scale5" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(56, -32)
+
+[node name="Scale6" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(136, -152)
+
+[node name="Scale7" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(144, -216)
+
+[node name="Scale8" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(144, -280)
+
+[node name="Scale9" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(128, -320)
+
+[node name="Scale10" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(128, -320)
+
+[node name="Scale11" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(88, -352)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(2, 1.506)
-texture = ExtResource("1_rjtm4")
-
-[node name="Scales" type="Node2D" parent="."]
-
-[node name="Pos10" type="Node2D" parent="Scales"]
-position = Vector2(-96, -96)
-
-[node name="Scale" parent="Scales/Pos10" instance=ExtResource("3_lykm3")]
-
-[node name="Pos11" type="Node2D" parent="Scales"]
-position = Vector2(-32, -96)
-
-[node name="Scale" parent="Scales/Pos11" instance=ExtResource("3_lykm3")]
-
-[node name="Pos17" type="Node2D" parent="Scales"]
-position = Vector2(-160, -32)
-
-[node name="Scale" parent="Scales/Pos17" instance=ExtResource("3_lykm3")]
-
-[node name="Pos18" type="Node2D" parent="Scales"]
-position = Vector2(-96, -32)
-
-[node name="Scale" parent="Scales/Pos18" instance=ExtResource("3_lykm3")]
-
-[node name="Pos19" type="Node2D" parent="Scales"]
-position = Vector2(-32, -32)
-
-[node name="Scale" parent="Scales/Pos19" instance=ExtResource("3_lykm3")]
-
-[node name="Pos20" type="Node2D" parent="Scales"]
-position = Vector2(32, -32)
-
-[node name="Scale" parent="Scales/Pos20" instance=ExtResource("3_lykm3")]
-
-[node name="Pos25" type="Node2D" parent="Scales"]
-position = Vector2(-160, 32)
-
-[node name="Scale" parent="Scales/Pos25" instance=ExtResource("3_lykm3")]
-
-[node name="Pos26" type="Node2D" parent="Scales"]
-position = Vector2(-96, 32)
-
-[node name="Scale" parent="Scales/Pos26" instance=ExtResource("3_lykm3")]
-
-[node name="Pos27" type="Node2D" parent="Scales"]
-position = Vector2(-32, 32)
-
-[node name="Scale" parent="Scales/Pos27" instance=ExtResource("3_lykm3")]
-
-[node name="Pos28" type="Node2D" parent="Scales"]
-position = Vector2(32, 32)
-
-[node name="Scale" parent="Scales/Pos28" instance=ExtResource("3_lykm3")]
-
-[node name="Pos34" type="Node2D" parent="Scales"]
-position = Vector2(-96, 96)
-
-[node name="Scale" parent="Scales/Pos34" instance=ExtResource("3_lykm3")]
-
-[node name="Pos35" type="Node2D" parent="Scales"]
-position = Vector2(-32, 96)
-
-[node name="Scale" parent="Scales/Pos35" instance=ExtResource("3_lykm3")]
+texture = ExtResource("3_mqak3")
