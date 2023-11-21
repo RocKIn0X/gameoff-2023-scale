@@ -1,11 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnwxm4q2m7q1i"]
+[gd_scene load_steps=7 format=3 uid="uid://dnwxm4q2m7q1i"]
 
 [ext_resource type="Script" path="res://Scripts/scale_v2.gd" id="1_jr775"]
-[ext_resource type="Texture2D" uid="uid://bi5wca0gefniq" path="res://Sources/Sprites/Fish/1/Scales/yellow_button12.png" id="2_foyjn"]
 [ext_resource type="PackedScene" uid="uid://c0rlm0qh78tmx" path="res://Scenes/trail_effect.tscn" id="2_roued"]
+[ext_resource type="Texture2D" uid="uid://btgoq1ljnqipe" path="res://Sources/Sprites/Fish/1/Scales/Fish Scales_S01_A1_N_N.png" id="4_uk80p"]
+[ext_resource type="Texture2D" uid="uid://xskpyc8hkpfi" path="res://Sources/Sprites/Fish/1/Scales/Fish Scales_S01_A2_N_N.png" id="5_7rw8y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ohwa4"]
 size = Vector2(48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rhsib"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_uk80p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7rw8y")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [node name="ScaleV2" type="RigidBody2D" groups=["scales"]]
 input_pickable = true
@@ -20,7 +35,8 @@ trail_prefab = ExtResource("2_roued")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ohwa4")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_foyjn")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rhsib")
+animation = &"idle"
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

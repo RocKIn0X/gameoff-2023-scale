@@ -1,9 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://dutvhlafcne2p"]
+[gd_scene load_steps=7 format=3 uid="uid://dutvhlafcne2p"]
 
 [ext_resource type="Script" path="res://Scripts/fish.gd" id="1_jh4lm"]
 [ext_resource type="Texture2D" uid="uid://bsgmbtl404laa" path="res://Sources/Sprites/Fish/1/Models/Fish Meat_S01.png" id="2_54tpf"]
 [ext_resource type="PackedScene" uid="uid://c0l6l2wuy01jc" path="res://Scenes/scale.tscn" id="3_lykm3"]
 [ext_resource type="Texture2D" uid="uid://cy8j601l54dxq" path="res://Sources/Sprites/Fish/1/Models/Fish_normal_S01_A1.png" id="3_mqak3"]
+[ext_resource type="Texture2D" uid="uid://cb8tnoju1p8fb" path="res://Sources/Sprites/Fish/1/Models/Fish_normal_S01_A2.png" id="5_dxf0k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mbn35"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mqak3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dxf0k")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [node name="Fish" type="Node2D" node_paths=PackedStringArray("scaleParent")]
 position = Vector2(488, 328)
@@ -206,5 +221,6 @@ rotation = 0.137881
 position = Vector2(42, -388)
 rotation = 0.137881
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("3_mqak3")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mbn35")
+animation = &"idle"

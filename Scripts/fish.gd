@@ -12,6 +12,7 @@ func _ready():
 	var scales = get_tree().get_nodes_in_group("scales");
 	for scale in scales:
 		scale.onDestroy.connect(_remove_scale);
+	$AnimatedSprite2D.play("idle")
 
 func _remove_scale():
 	scaleLeft -= 1;

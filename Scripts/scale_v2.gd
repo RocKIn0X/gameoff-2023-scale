@@ -13,6 +13,9 @@ var is_fx := false
 var hit_time: float
 var trail : Node
 
+func _ready():
+	$AnimatedSprite2D.play("idle")
+
 func hit():
 	print("hit")
 	if is_fx:
@@ -46,7 +49,6 @@ func _on_fx_done():
 
 
 func _on_mouse_entered():
-	print("mouse")
 	hit();
 
 
