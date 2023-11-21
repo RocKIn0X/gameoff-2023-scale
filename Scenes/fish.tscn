@@ -5,47 +5,205 @@
 [ext_resource type="PackedScene" uid="uid://c0l6l2wuy01jc" path="res://Scenes/scale.tscn" id="3_lykm3"]
 [ext_resource type="Texture2D" uid="uid://cy8j601l54dxq" path="res://Sources/Sprites/Fish/1/Models/Fish_normal_S01_A1.png" id="3_mqak3"]
 
-[node name="Fish" type="Node2D" node_paths=PackedStringArray("scaleParent")]
+[node name="Fish" type="Node2D"]
 position = Vector2(488, 328)
 script = ExtResource("1_jh4lm")
-scaleParent = NodePath("")
 
 [node name="Mask" type="Sprite2D" parent="."]
 clip_children = 2
 texture = ExtResource("2_54tpf")
 
-[node name="Scale" parent="Mask" instance=ExtResource("3_lykm3")]
-position = Vector2(-264, 24)
+[node name="Scale13" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(275, 208)
+rotation = 1.67552
 
-[node name="Scale2" parent="Mask" instance=ExtResource("3_lykm3")]
-position = Vector2(-176, 32)
+[node name="Scale14" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(215, 205)
+rotation = 2.03505
 
-[node name="Scale3" parent="Mask" instance=ExtResource("3_lykm3")]
-position = Vector2(-96, 24)
+[node name="Scale17" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(315, 130)
+rotation = 1.67552
 
-[node name="Scale4" parent="Mask" instance=ExtResource("3_lykm3")]
-position = Vector2(-8, 16)
+[node name="Scale15" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(259, 139)
+rotation = 1.79594
 
-[node name="Scale5" parent="Mask" instance=ExtResource("3_lykm3")]
-position = Vector2(56, -32)
+[node name="Scale16" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(209, 165)
+rotation = 1.12574
 
-[node name="Scale6" parent="Mask" instance=ExtResource("3_lykm3")]
-position = Vector2(136, -152)
+[node name="Scale18" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(347, 54)
+rotation = 1.48528
 
-[node name="Scale7" parent="Mask" instance=ExtResource("3_lykm3")]
-position = Vector2(144, -216)
+[node name="Scale19" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(281, 61)
+rotation = 1.36485
 
-[node name="Scale8" parent="Mask" instance=ExtResource("3_lykm3")]
-position = Vector2(144, -280)
+[node name="Scale20" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(217, 95)
+rotation = 1.10305
 
-[node name="Scale9" parent="Mask" instance=ExtResource("3_lykm3")]
-position = Vector2(128, -320)
+[node name="Scale21" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(167, 144)
+rotation = 0.74351
 
-[node name="Scale10" parent="Mask" instance=ExtResource("3_lykm3")]
-position = Vector2(128, -320)
+[node name="Scale22" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(354, -31)
+rotation = 1.36485
 
-[node name="Scale11" parent="Mask" instance=ExtResource("3_lykm3")]
-position = Vector2(88, -352)
+[node name="Scale23" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(287, -12)
+rotation = 1.24442
+
+[node name="Scale24" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(221, 25)
+rotation = 1.12225
+
+[node name="Scale25" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(163, 76)
+rotation = 0.883137
+
+[node name="Scale26" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(115, 134)
+rotation = 0.764454
+
+[node name="Scale27" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(346, -116)
+rotation = 1.24267
+
+[node name="Scale28" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(285, -85)
+rotation = 1.09607
+
+[node name="Scale29" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(215, -39)
+rotation = 0.975639
+
+[node name="Scale30" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(153, 13)
+rotation = 0.616101
+
+[node name="Scale31" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(99, 77)
+rotation = 0.736529
+
+[node name="Scale32" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(62, 144)
+rotation = 0.497419
+
+[node name="Scale33" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(295, -159)
+rotation = 1.09607
+
+[node name="Scale34" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(229, -117)
+rotation = 1.09607
+
+[node name="Scale35" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(88, 24)
+rotation = 0.736529
+
+[node name="Scale36" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(41, 89)
+rotation = 0.497419
+
+[node name="Scale37" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(9, 156)
+rotation = 0.497419
+
+[node name="Scale38" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(281, -230)
+rotation = 0.856957
+
+[node name="Scale39" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(222, -185)
+rotation = 0.856957
+
+[node name="Scale40" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(174, -130)
+rotation = 0.736529
+
+[node name="Scale41" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(78, -39)
+rotation = 0.736529
+
+[node name="Scale42" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(26, 19)
+rotation = 0.856957
+
+[node name="Scale43" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(-21, 75)
+rotation = 0.617847
+
+[node name="Scale44" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(-66, 127)
+rotation = 0.617847
+
+[node name="Scale45" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(254, -310)
+rotation = 0.617847
+
+[node name="Scale46" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(205, -250)
+rotation = 0.617847
+
+[node name="Scale47" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(160, -190)
+rotation = 0.497419
+
+[node name="Scale48" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(118, -127)
+rotation = 0.497419
+
+[node name="Scale60" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(85, -90)
+rotation = 0.736529
+
+[node name="Scale59" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(23, -34)
+rotation = 0.736529
+
+[node name="Scale49" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(-43, 17)
+rotation = 0.736529
+
+[node name="Scale50" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(-100, 75)
+rotation = 0.856957
+
+[node name="Scale51" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(-169, 97)
+rotation = 1.4556
+
+[node name="Scale52" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(171, -313)
+rotation = 0.258309
+
+[node name="Scale53" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(125, -254)
+rotation = 0.497419
+
+[node name="Scale54" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(-117, 29)
+rotation = 1.09607
+
+[node name="Scale55" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(-204, 30)
+rotation = 1.09607
+
+[node name="Scale56" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(-289, 19)
+rotation = 1.09607
+
+[node name="Scale57" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(108, -335)
+rotation = 0.137881
+
+[node name="Scale58" parent="Mask" instance=ExtResource("3_lykm3")]
+position = Vector2(42, -388)
+rotation = 0.137881
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("3_mqak3")
