@@ -38,6 +38,7 @@ func _to_fx():
 	trail.position = Vector2(0, 0)
 	trail.global_position = Vector2(0, 0)
 	$"..".add_child(trail)
+	reparent(get_tree().root) # Override masking
 
 
 func _on_fx_done():
@@ -54,7 +55,7 @@ func _on_mouse_entered():
 
 func _physics_process(_delta):
 	var current_time := Time.get_unix_time_from_system()
-	if current_time < hit_time + hit_blink_ms:
+	if current_time < hit_time + (hit_blink_ms as float) / 1000:
 		modulate = hit_color
 	else:
 		modulate = Color.WHITE
