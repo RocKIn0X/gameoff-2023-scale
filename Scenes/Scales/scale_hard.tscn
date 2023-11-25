@@ -1,21 +1,21 @@
 [gd_scene load_steps=7 format=3 uid="uid://cukng6kn3nnee"]
 
-[ext_resource type="Script" path="res://Scripts/scale_v2.gd" id="1_vl7si"]
-[ext_resource type="PackedScene" uid="uid://c0rlm0qh78tmx" path="res://Scenes/trail_effect.tscn" id="2_qtajx"]
-[ext_resource type="Texture2D" uid="uid://bp6kwe1p1ahps" path="res://Sources/Sprites/Fish/1/Scales/Fish Scales_A1_N_R.png" id="3_5r0jp"]
-[ext_resource type="Texture2D" uid="uid://bkq5xus5gq6tv" path="res://Sources/Sprites/Fish/1/Scales/Fish Scales_A2_N_R.png" id="4_poqno"]
+[ext_resource type="Script" path="res://Scripts/scale_v2.gd" id="1_eanh2"]
+[ext_resource type="PackedScene" uid="uid://c0rlm0qh78tmx" path="res://Scenes/trail_effect.tscn" id="2_vow0v"]
+[ext_resource type="Texture2D" uid="uid://bp6kwe1p1ahps" path="res://Sources/Sprites/Fish/1/Scales/Fish Scales_A1_N_R.png" id="3_eyu25"]
+[ext_resource type="Texture2D" uid="uid://bkq5xus5gq6tv" path="res://Sources/Sprites/Fish/1/Scales/Fish Scales_A2_N_R.png" id="4_2b2mw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ohwa4"]
-size = Vector2(48, 32)
+size = Vector2(80, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cqkt3"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_5r0jp")
+"texture": ExtResource("3_eyu25")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_poqno")
+"texture": ExtResource("4_2b2mw")
 }],
 "loop": true,
 "name": &"idle",
@@ -27,12 +27,12 @@ collision_mask = 0
 input_pickable = true
 gravity_scale = 0.0
 contact_monitor = true
-script = ExtResource("1_vl7si")
+script = ExtResource("1_eanh2")
 health = 5
 hit_blink_ms = 100
 hit_color = Color(0.678431, 0, 0, 1)
 bounce_force = 300000.0
-trail_prefab = ExtResource("2_qtajx")
+trail_prefab = ExtResource("2_vow0v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ohwa4")

@@ -1,0 +1,51 @@
+[gd_scene load_steps=12 format=3 uid="uid://bll2dhbn4kudn"]
+
+[ext_resource type="Script" path="res://Scripts/fish.gd" id="1_sxfui"]
+[ext_resource type="PackedScene" uid="uid://dtgo1qn2hptd3" path="res://Scenes/Scales/scale_fish2.tscn" id="2_m631r"]
+[ext_resource type="Script" path="res://Scripts/scale_data.gd" id="3_0vyjw"]
+[ext_resource type="PackedScene" uid="uid://cukng6kn3nnee" path="res://Scenes/Scales/scale_hard.tscn" id="4_qk4vr"]
+[ext_resource type="Texture2D" uid="uid://cmn0twv2kgdy7" path="res://Sources/Sprites/Fish/2/Models/Fish_medium Meat_S01.png" id="5_h23js"]
+[ext_resource type="PackedScene" uid="uid://c0l6l2wuy01jc" path="res://Scenes/scale.tscn" id="6_w83r2"]
+[ext_resource type="Texture2D" uid="uid://c37lb2iro1djv" path="res://Sources/Sprites/Fish/2/Models/Fish_medium_S01_A1.png" id="7_qm3lx"]
+[ext_resource type="Texture2D" uid="uid://d0n36aaifff1r" path="res://Sources/Sprites/Fish/2/Models/Fish_medium_S01_A2.png" id="8_app2q"]
+
+[sub_resource type="Resource" id="Resource_2qx34"]
+script = ExtResource("3_0vyjw")
+rate = 75
+scale = ExtResource("2_m631r")
+
+[sub_resource type="Resource" id="Resource_3iv8w"]
+script = ExtResource("3_0vyjw")
+rate = 25
+scale = ExtResource("4_qk4vr")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kvrtg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_qm3lx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_app2q")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Fish2" type="Node2D" node_paths=PackedStringArray("scaleParent")]
+position = Vector2(488, 328)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_sxfui")
+scaleParent = NodePath("Mask")
+fishScales = Array[ExtResource("3_0vyjw")]([SubResource("Resource_2qx34"), SubResource("Resource_3iv8w")])
+
+[node name="Mask" type="Sprite2D" parent="."]
+clip_children = 2
+texture = ExtResource("5_h23js")
+
+[node name="Scale" parent="Mask" instance=ExtResource("6_w83r2")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kvrtg")
+animation = &"idle"

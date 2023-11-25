@@ -2,24 +2,24 @@
 
 [ext_resource type="Script" path="res://Scripts/fish.gd" id="1_jh4lm"]
 [ext_resource type="Texture2D" uid="uid://bsgmbtl404laa" path="res://Sources/Sprites/Fish/1/Models/Fish Meat_S01.png" id="2_54tpf"]
-[ext_resource type="PackedScene" uid="uid://dnwxm4q2m7q1i" path="res://Scenes/scale_v2.tscn" id="2_big6l"]
+[ext_resource type="PackedScene" uid="uid://dnwxm4q2m7q1i" path="res://Scenes/Scales/scale_v2.tscn" id="2_yepjh"]
 [ext_resource type="PackedScene" uid="uid://c0l6l2wuy01jc" path="res://Scenes/scale.tscn" id="3_lykm3"]
 [ext_resource type="Script" path="res://Scripts/scale_data.gd" id="3_mncwq"]
 [ext_resource type="Texture2D" uid="uid://cy8j601l54dxq" path="res://Sources/Sprites/Fish/1/Models/Fish_normal_S01_A1.png" id="3_mqak3"]
-[ext_resource type="PackedScene" uid="uid://cukng6kn3nnee" path="res://Scenes/scale_hard.tscn" id="4_gla8e"]
+[ext_resource type="PackedScene" uid="uid://cukng6kn3nnee" path="res://Scenes/Scales/scale_hard.tscn" id="4_vwxoa"]
 [ext_resource type="Texture2D" uid="uid://cb8tnoju1p8fb" path="res://Sources/Sprites/Fish/1/Models/Fish_normal_S01_A2.png" id="5_dxf0k"]
 
 [sub_resource type="Resource" id="Resource_2qx34"]
 script = ExtResource("3_mncwq")
 rate = 75
-scale = ExtResource("2_big6l")
+scale = ExtResource("2_yepjh")
 
 [sub_resource type="Resource" id="Resource_3iv8w"]
 script = ExtResource("3_mncwq")
 rate = 25
-scale = ExtResource("4_gla8e")
+scale = ExtResource("4_vwxoa")
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_mbn35"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_c1x7b"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -237,5 +237,5 @@ position = Vector2(42, -388)
 rotation = 0.137881
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_mbn35")
+sprite_frames = SubResource("SpriteFrames_c1x7b")
 animation = &"idle"
