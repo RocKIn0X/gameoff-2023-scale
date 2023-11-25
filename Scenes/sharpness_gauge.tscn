@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cc4sm3t5auifs"]
+
+[ext_resource type="Script" path="res://Scripts/sharpness_gauge.gd" id="1_gb0rm"]
+
+[node name="SharpnessGauge" type="Node2D" node_paths=PackedStringArray("gauge_line")]
+script = ExtResource("1_gb0rm")
+gauge_line = NodePath("GaugeBar")
+
+[node name="GaugeBar" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 0, -400)
+width = 20.0
+default_color = Color(0.0392157, 0.713726, 0, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
