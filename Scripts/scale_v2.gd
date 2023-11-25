@@ -1,12 +1,12 @@
 extends RigidBody2D
 
-signal onDestroy
+signal onDestroy(scale)
 
 @export var health: int = 2;
 @export var hit_blink_ms: int = 500;
 @export var hit_color: Color
 @export var bounce_force: float = 50000.0
-@export var bounce_ms: int = 3000;
+@export var bounce_ms: int = 500;
 @export var trail_prefab: PackedScene
 
 var is_fx := false
@@ -30,6 +30,7 @@ func _set_scale(x, y):
 
 func _to_fx():
 	is_fx = true
+	hit_time = Time.get_unix_time_from_system()
 	gravity_scale = 10.0
 	var direction = randf() - 0.5
 	var force = (randf() + 0.5) * bounce_force
@@ -44,7 +45,7 @@ func _to_fx():
 
 
 func _on_fx_done():
-	onDestroy.emit()
+	onDestroy.emit(self)
 	if trail != null:
 		trail.queue_free()
 	$CollisionShape2D.disabled = false;
@@ -61,5 +62,5 @@ func _physics_process(_delta):
 		modulate = hit_color
 	else:
 		modulate = Color.WHITE
-	if is_fx and current_time > hit_time + bounce_ms:
+	if is_fx and current_time > hit_time + (bounce_ms as float) / 1000:
 		_on_fx_done()
