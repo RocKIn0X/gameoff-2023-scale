@@ -17,7 +17,6 @@ func _ready():
 	$AnimatedSprite2D.play("idle")
 
 func hit():
-	print("hit")
 	if is_fx:
 		return
 	health -= 1
@@ -25,6 +24,9 @@ func hit():
 	if health <= 0:
 		_to_fx()
 
+func _set_scale(x, y):
+	$CollisionShape2D.scale = Vector2(x, y)
+	$AnimatedSprite2D.scale = Vector2(x, y)
 
 func _to_fx():
 	is_fx = true

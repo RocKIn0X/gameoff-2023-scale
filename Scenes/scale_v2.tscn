@@ -23,6 +23,7 @@ animations = [{
 }]
 
 [node name="ScaleV2" type="RigidBody2D" groups=["scales"]]
+collision_mask = 0
 input_pickable = true
 gravity_scale = 0.0
 contact_monitor = true
