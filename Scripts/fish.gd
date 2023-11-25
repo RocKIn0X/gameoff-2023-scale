@@ -1,6 +1,6 @@
 extends Node2D
 
-signal finished;
+signal finished(fish);
 
 @export var scaleParent: Node2D;
 @export var fishScales: Array[ScaleData];
@@ -24,8 +24,9 @@ func _ready():
 func _remove_scale(scale):
 	scaleLeft -= 1;
 	if scaleLeft <= 0:
-		hide();
-
+		var count = $AnimatedSprite2D.sprite_frames.get_frame_count("done")
+		$AnimatedSprite2D.play("done")
+		finished.emit(self);
 
 func _on_scale_remover_body_entered(body):
 	pass # Replace with function body.
