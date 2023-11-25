@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c0l6l2wuy01jc"]
 
-[ext_resource type="Script" path="res://Scripts/scale_holder.gd" id="1_cuq2m"]
+[ext_resource type="Script" path="res://Scripts/scales/scale_holder.gd" id="1_lurb7"]
 [ext_resource type="Texture2D" uid="uid://btgoq1ljnqipe" path="res://Sources/Sprites/Fish/1/Scales/Fish Scales_S01_A1_N_N.png" id="2_sak1i"]
 [ext_resource type="Texture2D" uid="uid://xskpyc8hkpfi" path="res://Sources/Sprites/Fish/1/Scales/Fish Scales_S01_A2_N_N.png" id="3_lvdpt"]
 
@@ -19,7 +19,7 @@ animations = [{
 }]
 
 [node name="ScaleGenerator" type="Node2D" groups=["scales"]]
-script = ExtResource("1_cuq2m")
+script = ExtResource("1_lurb7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_o8d64")

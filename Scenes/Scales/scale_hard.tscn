@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cukng6kn3nnee"]
 
-[ext_resource type="Script" path="res://Scripts/scale_v2.gd" id="1_eanh2"]
+[ext_resource type="Script" path="res://Scripts/scales/scale_v2.gd" id="1_rcqq3"]
 [ext_resource type="PackedScene" uid="uid://c0rlm0qh78tmx" path="res://Scenes/trail_effect.tscn" id="2_vow0v"]
 [ext_resource type="Texture2D" uid="uid://bp6kwe1p1ahps" path="res://Sources/Sprites/Fish/1/Scales/Fish Scales_A1_N_R.png" id="3_eyu25"]
 [ext_resource type="Texture2D" uid="uid://bkq5xus5gq6tv" path="res://Sources/Sprites/Fish/1/Scales/Fish Scales_A2_N_R.png" id="4_2b2mw"]
@@ -27,7 +27,7 @@ collision_mask = 0
 input_pickable = true
 gravity_scale = 0.0
 contact_monitor = true
-script = ExtResource("1_eanh2")
+script = ExtResource("1_rcqq3")
 health = 5
 hit_blink_ms = 100
 hit_color = Color(0.678431, 0, 0, 1)

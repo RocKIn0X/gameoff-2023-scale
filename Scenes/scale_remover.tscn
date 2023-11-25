@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ccxnlbpb51cve"]
 
-[ext_resource type="Script" path="res://Scripts/scale_remover.gd" id="1_pklt3"]
+[ext_resource type="Script" path="res://Scripts/scales/scale_remover.gd" id="1_pklt3"]
 [ext_resource type="Texture2D" uid="uid://dw82baymjmuvy" path="res://Sources/Sprites/ScaleRemovers/knife.png" id="1_vdjxa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2igi5"]

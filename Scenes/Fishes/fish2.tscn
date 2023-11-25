@@ -1,26 +1,39 @@
-[gd_scene load_steps=12 format=3 uid="uid://bll2dhbn4kudn"]
+[gd_scene load_steps=14 format=3 uid="uid://bll2dhbn4kudn"]
 
 [ext_resource type="Script" path="res://Scripts/fish.gd" id="1_sxfui"]
 [ext_resource type="PackedScene" uid="uid://dtgo1qn2hptd3" path="res://Scenes/Scales/scale_fish2.tscn" id="2_m631r"]
-[ext_resource type="Script" path="res://Scripts/scale_data.gd" id="3_0vyjw"]
+[ext_resource type="Script" path="res://Scripts/scales/scale_data.gd" id="3_ubedl"]
 [ext_resource type="PackedScene" uid="uid://cukng6kn3nnee" path="res://Scenes/Scales/scale_hard.tscn" id="4_qk4vr"]
 [ext_resource type="Texture2D" uid="uid://cmn0twv2kgdy7" path="res://Sources/Sprites/Fish/2/Models/Fish_medium Meat_S01.png" id="5_h23js"]
 [ext_resource type="PackedScene" uid="uid://bwpsav601vpno" path="res://Scenes/ScaleHolder/scale_holder_2.tscn" id="6_goa5j"]
 [ext_resource type="Texture2D" uid="uid://c37lb2iro1djv" path="res://Sources/Sprites/Fish/2/Models/Fish_medium_S01_A1.png" id="7_qm3lx"]
+[ext_resource type="Texture2D" uid="uid://c5o5ah2xk1w3w" path="res://Sources/Sprites/Fish/2/Models/Fish_medium_complete_S01_A1.png" id="7_w5idn"]
 [ext_resource type="Texture2D" uid="uid://d0n36aaifff1r" path="res://Sources/Sprites/Fish/2/Models/Fish_medium_S01_A2.png" id="8_app2q"]
+[ext_resource type="Texture2D" uid="uid://bhqr8phqup5hj" path="res://Sources/Sprites/Fish/2/Models/Fish_medium_complete_S01_A2.png" id="8_vm6n7"]
 
 [sub_resource type="Resource" id="Resource_2qx34"]
-script = ExtResource("3_0vyjw")
+script = ExtResource("3_ubedl")
 rate = 75
 scale = ExtResource("2_m631r")
 
 [sub_resource type="Resource" id="Resource_3iv8w"]
-script = ExtResource("3_0vyjw")
+script = ExtResource("3_ubedl")
 rate = 25
 scale = ExtResource("4_qk4vr")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kvrtg"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_w5idn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vm6n7")
+}],
+"loop": true,
+"name": &"done",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("7_qm3lx")
@@ -38,7 +51,7 @@ position = Vector2(488, 328)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_sxfui")
 scaleParent = NodePath("Mask")
-fishScales = Array[ExtResource("3_0vyjw")]([SubResource("Resource_2qx34"), SubResource("Resource_3iv8w")])
+fishScales = Array[ExtResource("3_ubedl")]([SubResource("Resource_2qx34"), SubResource("Resource_3iv8w")])
 
 [node name="Mask" type="Sprite2D" parent="."]
 clip_children = 2
@@ -48,4 +61,5 @@ texture = ExtResource("5_h23js")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kvrtg")
-animation = &"idle"
+animation = &"done"
+frame_progress = 0.203821
