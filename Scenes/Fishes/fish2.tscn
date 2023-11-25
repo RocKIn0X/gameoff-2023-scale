@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://Scripts/scale_data.gd" id="3_0vyjw"]
 [ext_resource type="PackedScene" uid="uid://cukng6kn3nnee" path="res://Scenes/Scales/scale_hard.tscn" id="4_qk4vr"]
 [ext_resource type="Texture2D" uid="uid://cmn0twv2kgdy7" path="res://Sources/Sprites/Fish/2/Models/Fish_medium Meat_S01.png" id="5_h23js"]
-[ext_resource type="PackedScene" uid="uid://c0l6l2wuy01jc" path="res://Scenes/scale.tscn" id="6_w83r2"]
+[ext_resource type="PackedScene" uid="uid://bwpsav601vpno" path="res://Scenes/ScaleHolder/scale_holder_2.tscn" id="6_goa5j"]
 [ext_resource type="Texture2D" uid="uid://c37lb2iro1djv" path="res://Sources/Sprites/Fish/2/Models/Fish_medium_S01_A1.png" id="7_qm3lx"]
 [ext_resource type="Texture2D" uid="uid://d0n36aaifff1r" path="res://Sources/Sprites/Fish/2/Models/Fish_medium_S01_A2.png" id="8_app2q"]
 
@@ -44,7 +44,7 @@ fishScales = Array[ExtResource("3_0vyjw")]([SubResource("Resource_2qx34"), SubRe
 clip_children = 2
 texture = ExtResource("5_h23js")
 
-[node name="Scale" parent="Mask" instance=ExtResource("6_w83r2")]
+[node name="ScaleHolder2" parent="Mask" instance=ExtResource("6_goa5j")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kvrtg")

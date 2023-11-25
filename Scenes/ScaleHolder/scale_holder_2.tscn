@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwpsav601vpno"]
+
+[ext_resource type="Script" path="res://Scripts/scale_holder.gd" id="1_k0ce3"]
+[ext_resource type="Texture2D" uid="uid://gbb32a5f0lys" path="res://Sources/Sprites/Fish/2/Scales/Fish_medium_Scales_S01_A1_N_N.png" id="2_dtvgv"]
+[ext_resource type="Texture2D" uid="uid://c3ksytvk35wtq" path="res://Sources/Sprites/Fish/2/Scales/Fish_medium_Scales_S01_A2_N_N.png" id="3_xqfs2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o8d64"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dtvgv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xqfs2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="ScaleHolder2" type="Node2D" groups=["scales"]]
+script = ExtResource("1_k0ce3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_o8d64")
+animation = &"idle"

@@ -39,6 +39,6 @@ shape = SubResource("RectangleShape2D_3d7x3")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_rhsib")
 animation = &"idle"
-frame_progress = 0.382525
+frame_progress = 0.859719
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
