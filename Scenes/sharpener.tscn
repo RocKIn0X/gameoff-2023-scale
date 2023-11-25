@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://rwnwg37k1ddb"]
+
+[ext_resource type="Script" path="res://Scripts/sharpener.gd" id="1_b4mmg"]
+[ext_resource type="Texture2D" uid="uid://do11swbah5kst" path="res://Sources/Sprites/Sharpener/whet.png" id="1_vfrrv"]
+[ext_resource type="PackedScene" uid="uid://cc4sm3t5auifs" path="res://Scenes/sharpness_gauge.tscn" id="3_8yhdy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l34mk"]
+size = Vector2(313.75, 656.562)
+
+[node name="Sharpener" type="Node2D" node_paths=PackedStringArray("hitbox")]
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_b4mmg")
+hitbox = NodePath("Whet/Hitbox")
+
+[node name="Whet" type="Sprite2D" parent="."]
+position = Vector2(650, 502.5)
+texture = ExtResource("1_vfrrv")
+
+[node name="Hitbox" type="Area2D" parent="Whet"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Whet/Hitbox"]
+position = Vector2(-25.0001, -102.5)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_l34mk")
+
+[node name="SharpnessGauge" parent="." instance=ExtResource("3_8yhdy")]
+position = Vector2(1170, 651.25)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 31.25
+offset_top = 21.25
+offset_right = 39.25
+offset_bottom = 29.25
+text = "Set sharpness 0"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed" binds= [0.0]]
