@@ -15,9 +15,9 @@ func _ready():
 
 	var scales = get_tree().get_nodes_in_group("scales");
 	for i in scales.size():
-		scales[i].spawnScale(getRandomScale(), 0.5)
-#	for scale in scales:
-#		scale.onDestroy.connect(_remove_scale);
+		scales[i].spawnScale(getRandomScale(), scale.x)
+	for scale in scales:
+		scale.onDestroy.connect(_remove_scale);
 	$AnimatedSprite2D.play("idle")
 
 func _remove_scale():
