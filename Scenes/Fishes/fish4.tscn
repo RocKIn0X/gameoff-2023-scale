@@ -57,10 +57,344 @@ fishScales = Array[ExtResource("3_qrogf")]([SubResource("Resource_2qx34"), SubRe
 
 [node name="Mask" type="Sprite2D" parent="."]
 clip_children = 2
+position = Vector2(2, 0)
 texture = ExtResource("5_6ivk6")
 
 [node name="ScaleHolder4" parent="Mask" instance=ExtResource("6_8jv5h")]
-position = Vector2(328, 488)
+position = Vector2(370, 476)
+rotation = 1.309
+
+[node name="ScaleHolder5" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(306, 510)
+rotation = 1.91986
+
+[node name="ScaleHolder6" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(388, 394)
+rotation = 1.309
+
+[node name="ScaleHolder7" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(322, 430)
+rotation = 1.5708
+
+[node name="ScaleHolder8" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(426, 318)
+rotation = 1.309
+
+[node name="ScaleHolder9" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(352, 352)
+rotation = 1.5708
+
+[node name="ScaleHolder10" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(274, 376)
+rotation = 1.5708
+
+[node name="ScaleHolder11" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(446, 230)
+rotation = 1.309
+
+[node name="ScaleHolder12" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(374, 274)
+rotation = 1.5708
+
+[node name="ScaleHolder13" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(296, 308)
+rotation = 1.5708
+
+[node name="ScaleHolder14" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(218, 336)
+rotation = 1.5708
+
+[node name="ScaleHolder15" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(136, 356)
+rotation = 1.74533
+
+[node name="ScaleHolder16" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(444, 146)
+rotation = 1.65806
+
+[node name="ScaleHolder17" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(380, 196)
+rotation = 1.65806
+
+[node name="ScaleHolder18" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(312, 238)
+rotation = 1.39626
+
+[node name="ScaleHolder19" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(236, 276)
+rotation = 1.5708
+
+[node name="ScaleHolder20" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(156, 300)
+rotation = 1.5708
+
+[node name="ScaleHolder21" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(72, 316)
+rotation = 1.74533
+
+[node name="ScaleHolder22" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(456, 56)
+rotation = 1.39626
+
+[node name="ScaleHolder23" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(394, 114)
+rotation = 1.5708
+
+[node name="ScaleHolder24" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(324, 162)
+rotation = 1.5708
+
+[node name="ScaleHolder25" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(252, 202)
+rotation = 1.5708
+
+[node name="ScaleHolder26" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(174, 234)
+rotation = 1.5708
+
+[node name="ScaleHolder27" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(92, 258)
+rotation = 1.65806
+
+[node name="ScaleHolder28" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(12, 278)
+rotation = 1.74533
+
+[node name="ScaleHolder29" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-72, 278)
+rotation = 1.74533
+
+[node name="ScaleHolder30" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(448, -30)
+rotation = 1.309
+
+[node name="ScaleHolder31" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(394, 30)
+rotation = 1.39626
+
+[node name="ScaleHolder32" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(328, 80)
+rotation = 1.5708
+
+[node name="ScaleHolder33" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(262, 124)
+rotation = 1.5708
+
+[node name="ScaleHolder34" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(188, 158)
+rotation = 1.5708
+
+[node name="ScaleHolder35" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(108, 184)
+rotation = 1.5708
+
+[node name="ScaleHolder36" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(26, 206)
+rotation = 1.5708
+
+[node name="ScaleHolder37" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-50, 210)
+rotation = 1.65806
+
+[node name="ScaleHolder38" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-126, 202)
+rotation = 1.65806
+
+[node name="ScaleHolder39" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(464, -118)
+rotation = 1.309
+
+[node name="ScaleHolder40" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(402, -60)
+rotation = 1.48353
+
+[node name="ScaleHolder41" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(340, -2)
+rotation = 1.48353
+
+[node name="ScaleHolder42" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(274, 44)
+rotation = 1.48353
+
+[node name="ScaleHolder43" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(200, 80)
+rotation = 1.48353
+
+[node name="ScaleHolder44" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(124, 110)
+rotation = 1.48353
+
+[node name="ScaleHolder45" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(46, 132)
+rotation = 1.48353
+
+[node name="ScaleHolder46" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-22, 136)
+rotation = 1.5708
+
+[node name="ScaleHolder47" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-102, 138)
+rotation = 1.5708
+
+[node name="ScaleHolder48" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-182, 134)
+rotation = 1.5708
+
+[node name="ScaleHolder49" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(452, -210)
+rotation = 1.309
+
+[node name="ScaleHolder50" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(396, -148)
+rotation = 1.309
+
+[node name="ScaleHolder51" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(338, -88)
+rotation = 1.309
+
+[node name="ScaleHolder52" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(274, -37.9999)
+rotation = 1.39626
+
+[node name="ScaleHolder53" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(204, 6)
+rotation = 1.39626
+
+[node name="ScaleHolder54" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(126, 42)
+rotation = 1.39626
+
+[node name="ScaleHolder55" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(44, 70)
+rotation = 1.5708
+
+[node name="ScaleHolder56" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-42, 80)
+rotation = 1.65806
+
+[node name="ScaleHolder57" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-130, 76)
+rotation = 1.65806
+
+[node name="ScaleHolder58" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-218, 64)
+rotation = 1.74533
+
+[node name="ScaleHolder59" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(386, -232)
+rotation = 1.22173
+
+[node name="ScaleHolder60" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(328, -174)
+rotation = 1.22173
+
+[node name="ScaleHolder61" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(266, -118)
+rotation = 1.309
+
+[node name="ScaleHolder62" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(200, -66)
+rotation = 1.39626
+
+[node name="ScaleHolder63" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(126, -24)
+rotation = 1.39626
+
+[node name="ScaleHolder64" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(50, 4)
+rotation = 1.48353
+
+[node name="ScaleHolder65" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-32, 16)
+rotation = 1.5708
+
+[node name="ScaleHolder66" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-108, 14)
+rotation = 1.65806
+
+[node name="ScaleHolder67" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-186, 2)
+rotation = 1.65806
+
+[node name="ScaleHolder68" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-266, -14)
+rotation = 1.74533
+
+[node name="ScaleHolder69" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(314, -258)
+rotation = 1.22173
+
+[node name="ScaleHolder70" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(256, -196)
+rotation = 1.13446
+
+[node name="ScaleHolder71" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(192, -142)
+rotation = 1.22173
+
+[node name="ScaleHolder72" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(126, -100)
+rotation = 1.309
+
+[node name="ScaleHolder73" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(52, -68)
+rotation = 1.39626
+
+[node name="ScaleHolder74" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-26, -48)
+rotation = 1.5708
+
+[node name="ScaleHolder75" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-102, -52)
+rotation = 1.65806
+
+[node name="ScaleHolder76" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-176, -58)
+rotation = 1.74533
+
+[node name="ScaleHolder77" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-246, -78)
+rotation = 1.74533
+
+[node name="ScaleHolder78" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-322, -120)
+rotation = 1.74533
+
+[node name="ScaleHolder79" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(272, -328)
+rotation = 1.22173
+
+[node name="ScaleHolder80" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(234, -272)
+rotation = 1.0472
+
+[node name="ScaleHolder81" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(172, -220)
+rotation = 1.0472
+
+[node name="ScaleHolder82" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(108, -176)
+rotation = 1.22173
+
+[node name="ScaleHolder83" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(42, -140)
+rotation = 1.309
+
+[node name="ScaleHolder84" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-26, -116)
+rotation = 1.48353
+
+[node name="ScaleHolder85" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-106, -106)
+rotation = 1.65806
+
+[node name="ScaleHolder86" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-190, -116)
+rotation = 1.65806
+
+[node name="ScaleHolder87" parent="Mask" instance=ExtResource("6_8jv5h")]
+position = Vector2(-266, -138)
+rotation = 1.74533
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kvrtg")
