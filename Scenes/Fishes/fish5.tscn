@@ -1,15 +1,15 @@
-[gd_scene load_steps=14 format=3 uid="uid://b887amldn1dev"]
+[gd_scene load_steps=14 format=3 uid="uid://bjxn5yuq5iwo2"]
 
 [ext_resource type="Script" path="res://Scripts/fish.gd" id="1_vwtou"]
 [ext_resource type="PackedScene" uid="uid://dtgo1qn2hptd3" path="res://Scenes/Scales/scale_fish2.tscn" id="2_f5vey"]
 [ext_resource type="Script" path="res://Scripts/scales/scale_data.gd" id="3_t5xmi"]
 [ext_resource type="PackedScene" uid="uid://cukng6kn3nnee" path="res://Scenes/Scales/scale_hard.tscn" id="4_y77i5"]
-[ext_resource type="Texture2D" uid="uid://hiru61rkxsvv" path="res://Sources/Sprites/Fish/3/Fish Mid_S01.png" id="5_310q5"]
-[ext_resource type="PackedScene" uid="uid://b24adklk3lqag" path="res://Scenes/ScaleHolder/scale_holder_3.tscn" id="6_0hkoa"]
-[ext_resource type="Texture2D" uid="uid://bx2jbidhkxrbw" path="res://Sources/Sprites/Fish/3/Fish_Mid_complete_S01_A1.png" id="7_yj5e5"]
-[ext_resource type="Texture2D" uid="uid://ckhvwbmweexsf" path="res://Sources/Sprites/Fish/3/Fish_Mid_complete_S01_A2.png" id="8_h2bkl"]
-[ext_resource type="Texture2D" uid="uid://dws7jvc26enec" path="res://Sources/Sprites/Fish/3/Fish_mid_S01_A1.png" id="9_8nijd"]
-[ext_resource type="Texture2D" uid="uid://cmd2hqks4d04x" path="res://Sources/Sprites/Fish/3/Fish_mid_S01_A2.png" id="10_kaej6"]
+[ext_resource type="Texture2D" uid="uid://mdxinlo6tip" path="res://Sources/Sprites/Fish/5/Fish_Biggest Meat_S01.png" id="5_c3ten"]
+[ext_resource type="PackedScene" uid="uid://dns85l5p60sn2" path="res://Scenes/ScaleHolder/scale_holder_5.tscn" id="6_52ulk"]
+[ext_resource type="Texture2D" uid="uid://bp5bk6dvsx74d" path="res://Sources/Sprites/Fish/5/Fish_Biggest_complete_S01_A1.png" id="7_jd3go"]
+[ext_resource type="Texture2D" uid="uid://c05it75fygou0" path="res://Sources/Sprites/Fish/5/Fish_Biggest_complete_S01_A2.png" id="8_82g8h"]
+[ext_resource type="Texture2D" uid="uid://br7ig13ovps8t" path="res://Sources/Sprites/Fish/5/Fish_Biggest_S01_A1.png" id="9_h26pr"]
+[ext_resource type="Texture2D" uid="uid://djnave2vjkul8" path="res://Sources/Sprites/Fish/5/Fish_Biggest_S01_A2.png" id="10_obdem"]
 
 [sub_resource type="Resource" id="Resource_2qx34"]
 script = ExtResource("3_t5xmi")
@@ -27,10 +27,10 @@ sharpness_cost = 0
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_yj5e5")
+"texture": ExtResource("7_jd3go")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_h2bkl")
+"texture": ExtResource("8_82g8h")
 }],
 "loop": true,
 "name": &"done",
@@ -38,17 +38,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_8nijd")
+"texture": ExtResource("9_h26pr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_kaej6")
+"texture": ExtResource("10_obdem")
 }],
 "loop": true,
 "name": &"idle",
 "speed": 5.0
 }]
 
-[node name="Fish3" type="Node2D" node_paths=PackedStringArray("scaleParent")]
+[node name="Fish5" type="Node2D" node_paths=PackedStringArray("scaleParent")]
 position = Vector2(488, 328)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_vwtou")
@@ -57,10 +57,10 @@ fishScales = Array[ExtResource("3_t5xmi")]([SubResource("Resource_2qx34"), SubRe
 
 [node name="Mask" type="Sprite2D" parent="."]
 clip_children = 2
-texture = ExtResource("5_310q5")
+texture = ExtResource("5_c3ten")
 
-[node name="ScaleHolder3" parent="Mask" instance=ExtResource("6_0hkoa")]
-position = Vector2(154, 258)
+[node name="ScaleHolder5" parent="Mask" instance=ExtResource("6_52ulk")]
+position = Vector2(612, 60)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kvrtg")
