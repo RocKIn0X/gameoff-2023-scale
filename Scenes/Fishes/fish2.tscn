@@ -15,11 +15,13 @@
 script = ExtResource("3_ubedl")
 rate = 75
 scale = ExtResource("2_m631r")
+sharpness_cost = 0
 
 [sub_resource type="Resource" id="Resource_3iv8w"]
 script = ExtResource("3_ubedl")
 rate = 25
 scale = ExtResource("4_qk4vr")
+sharpness_cost = 0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kvrtg"]
 animations = [{
@@ -55,6 +57,7 @@ fishScales = Array[ExtResource("3_ubedl")]([SubResource("Resource_2qx34"), SubRe
 
 [node name="Mask" type="Sprite2D" parent="."]
 clip_children = 2
+position = Vector2(2, 0)
 texture = ExtResource("5_h23js")
 
 [node name="ScaleHolder2" parent="Mask" instance=ExtResource("6_goa5j")]
@@ -488,4 +491,3 @@ rotation = 2.06472
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kvrtg")
 animation = &"done"
-frame_progress = 0.203821

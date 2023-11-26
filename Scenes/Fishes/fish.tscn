@@ -14,11 +14,13 @@
 script = ExtResource("3_m1pwc")
 rate = 75
 scale = ExtResource("2_yepjh")
+sharpness_cost = 0
 
 [sub_resource type="Resource" id="Resource_3iv8w"]
 script = ExtResource("3_m1pwc")
 rate = 25
 scale = ExtResource("4_vwxoa")
+sharpness_cost = 0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c1x7b"]
 animations = [{

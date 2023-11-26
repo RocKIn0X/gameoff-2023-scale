@@ -1,11 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://b887amldn1dev"]
+[gd_scene load_steps=14 format=3 uid="uid://bjxn5yuq5iwo2"]
 
 [ext_resource type="Script" path="res://Scripts/fish.gd" id="1_vwtou"]
 [ext_resource type="PackedScene" uid="uid://dtgo1qn2hptd3" path="res://Scenes/Scales/scale_fish2.tscn" id="2_f5vey"]
 [ext_resource type="Script" path="res://Scripts/scales/scale_data.gd" id="3_t5xmi"]
 [ext_resource type="PackedScene" uid="uid://cukng6kn3nnee" path="res://Scenes/Scales/scale_hard.tscn" id="4_y77i5"]
 [ext_resource type="Texture2D" uid="uid://hiru61rkxsvv" path="res://Sources/Sprites/Fish/3/Fish Mid_S01.png" id="5_310q5"]
-[ext_resource type="PackedScene" uid="uid://b24adklk3lqag" path="res://Scenes/ScaleHolder/scale_holder_3.tscn" id="6_0hkoa"]
+[ext_resource type="PackedScene" path="res://Scenes/ScaleHolder/scale_holder_3.tscn" id="6_0hkoa"]
 [ext_resource type="Texture2D" uid="uid://bx2jbidhkxrbw" path="res://Sources/Sprites/Fish/3/Fish_Mid_complete_S01_A1.png" id="7_yj5e5"]
 [ext_resource type="Texture2D" uid="uid://ckhvwbmweexsf" path="res://Sources/Sprites/Fish/3/Fish_Mid_complete_S01_A2.png" id="8_h2bkl"]
 [ext_resource type="Texture2D" uid="uid://dws7jvc26enec" path="res://Sources/Sprites/Fish/3/Fish_mid_S01_A1.png" id="9_8nijd"]
