@@ -24,9 +24,11 @@ scale = Vector2(0.999999, 0.999999)
 shape = SubResource("RectangleShape2D_l34mk")
 
 [node name="SharpnessGauge" parent="." instance=ExtResource("3_8yhdy")]
+visible = false
 position = Vector2(1170, 651.25)
 
 [node name="Button" type="Button" parent="."]
+visible = false
 offset_left = 31.25
 offset_top = 21.25
 offset_right = 39.25
