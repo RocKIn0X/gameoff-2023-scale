@@ -1,5 +1,7 @@
 extends RigidBody2D
 
+class_name Scale
+
 signal onDestroy(scale)
 
 @export var health: int = 2;

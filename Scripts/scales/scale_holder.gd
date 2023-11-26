@@ -1,8 +1,10 @@
 extends Node2D
 
+class_name ScaleHolder
+
 signal onDestroy(scale)
 
-var current;
+var current: Scale;
 
 func spawnScale(scale, size):
 	$AnimatedSprite2D.visible = false; 
