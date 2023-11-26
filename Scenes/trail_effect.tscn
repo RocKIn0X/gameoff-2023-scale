@@ -8,8 +8,8 @@ point_count = 3
 
 [sub_resource type="Gradient" id="Gradient_4sy64"]
 interpolation_mode = 2
-offsets = PackedFloat32Array(0.251656, 0.721854)
-colors = PackedColorArray(1, 1, 1, 1, 0.6992, 0.719467, 0.76, 1)
+offsets = PackedFloat32Array(0.198675, 0.377483, 0.622517)
+colors = PackedColorArray(0.85098, 1, 1, 0.67451, 0.63514, 0.853858, 0.874093, 0.861122, 0.712826, 0.890148, 0.913613, 1)
 
 [node name="TrailEffect" type="Line2D"]
 width_curve = SubResource("Curve_8hm61")
