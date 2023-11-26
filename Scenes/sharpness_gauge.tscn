@@ -5,6 +5,9 @@
 [node name="SharpnessGauge" type="Node2D" node_paths=PackedStringArray("gauge_line")]
 script = ExtResource("1_gb0rm")
 gauge_line = NodePath("GaugeBar")
+gauge_normal_color = Color(0, 0.788235, 0, 1)
+gauge_mid_color = Color(1, 1, 0.235294, 1)
+gauge_low_color = Color(1, 0, 0, 1)
 
 [node name="GaugeBar" type="Line2D" parent="."]
 points = PackedVector2Array(0, 0, 0, -400)

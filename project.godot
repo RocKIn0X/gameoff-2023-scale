@@ -11,12 +11,14 @@ config_version=5
 [application]
 
 config/name="Game Off Scale"
+run/main_scene="res://Scenes/main.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 VarManager="*res://Scripts/lib/var_manager.gd"
+GameInit="*res://Scripts/game_init.gd"
 GameCalculation="*res://Scripts/game_calculation.gd"
 Debug="*res://Scripts/debug.gd"
 
