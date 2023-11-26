@@ -10,7 +10,7 @@ const SHARPNESS_KEY = Varkey.F_SHARPNESS_VAL
 func _ready():
 	hitbox.mouse_entered.connect(_on_mouse_entered)
 	hitbox.mouse_exited.connect(_on_mouse_left)
-	Debug.set_sharpness(0.0)
+	#Debug.set_sharpness(0.0)
 
 func _on_mouse_entered():
 	_is_tracking = true
