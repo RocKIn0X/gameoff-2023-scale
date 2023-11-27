@@ -25,10 +25,12 @@ func get_point(): return point;
 func hit():
 	if is_fx:
 		return
+	var current_sharpness = VarManager.get_data(Varkey.F_SHARPNESS_VAL);
+	if current_sharpness <= 0: return
 	health -= GameCalculation.get_attack_power()
 	hit_time = Time.get_unix_time_from_system()
 	var sharpness = max(
-		VarManager.get_data(Varkey.F_SHARPNESS_VAL) 
+		current_sharpness
 		- (GameCalculation.get_sharpness_loss_rate() * sharpness_cost)
 	, 0.0)
 	VarManager.set_data(Varkey.F_SHARPNESS_VAL, sharpness)
