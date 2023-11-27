@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c1plbnxnqxtwb"]
+[gd_scene load_steps=6 format=3 uid="uid://c1plbnxnqxtwb"]
 
 [ext_resource type="PackedScene" uid="uid://ccxnlbpb51cve" path="res://Scenes/scale_remover.tscn" id="2_52a01"]
 [ext_resource type="PackedScene" uid="uid://ceipbtt5snt3i" path="res://Scenes/Fishes/fish_order.tscn" id="2_q3y52"]
 [ext_resource type="PackedScene" uid="uid://cc4sm3t5auifs" path="res://Scenes/sharpness_gauge.tscn" id="3_2vqgb"]
 [ext_resource type="PackedScene" uid="uid://rwnwg37k1ddb" path="res://Scenes/sharpener.tscn" id="4_5txwc"]
+[ext_resource type="PackedScene" uid="uid://b442d4hpgbvm3" path="res://Scenes/Core/TimeAttack.tscn" id="5_is0el"]
 
 [node name="Main" type="Node2D"]
 
@@ -17,3 +18,5 @@ position = Vector2(559, -6)
 
 [node name="ScaleRemover" parent="." instance=ExtResource("2_52a01")]
 position = Vector2(289.775, 209.902)
+
+[node name="TimeAttack" parent="." instance=ExtResource("5_is0el")]
