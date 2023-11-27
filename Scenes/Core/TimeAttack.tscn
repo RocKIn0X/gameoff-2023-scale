@@ -15,6 +15,7 @@ progress_bar = NodePath("TextureProgressBar")
 offset_right = 1024.0
 offset_bottom = 1024.0
 scale = Vector2(1, 0.328)
+max_value = 10000.0
 value = 100.0
 texture_under = ExtResource("2_4o7dr")
 texture_progress = ExtResource("3_73nvx")
