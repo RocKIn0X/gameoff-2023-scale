@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://fdnufyf5diu"]
+
+[ext_resource type="Texture2D" uid="uid://br5d5yudve1pl" path="res://Sources/Sprites/BG/background_001.png" id="1_fd43l"]
+[ext_resource type="Texture2D" uid="uid://cu7iaidf37lai" path="res://Sources/Sprites/BG/slide rail_001.png" id="2_is6pv"]
+
+[node name="Background" type="Node2D"]
+
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_fd43l")
+
+[node name="SlideRail001" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_is6pv")

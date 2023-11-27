@@ -5,8 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cq2q4c2eieswp" path="res://Sources/Sprites/UI/RedBar.png" id="3_73nvx"]
 
 [node name="TimeAttack" type="Node2D" node_paths=PackedStringArray("progress_bar")]
-position = Vector2(352, 0)
-scale = Vector2(0.5, 0.5)
+position = Vector2(448, 0)
 script = ExtResource("1_wjs5a")
 timeout = 120.0
 progress_bar = NodePath("TextureProgressBar")

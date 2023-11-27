@@ -57,7 +57,6 @@ fishScales = Array[ExtResource("3_ubedl")]([SubResource("Resource_2qx34"), SubRe
 
 [node name="Mask" type="Sprite2D" parent="."]
 clip_children = 2
-position = Vector2(2, 0)
 texture = ExtResource("5_h23js")
 
 [node name="ScaleHolder2" parent="Mask" instance=ExtResource("6_goa5j")]
@@ -491,3 +490,4 @@ rotation = 2.06472
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kvrtg")
 animation = &"done"
+frame_progress = 0.203821
