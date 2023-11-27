@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr7afkbv7y5iq"]
+
+[ext_resource type="FontFile" uid="uid://bgmyh3liqpcvi" path="res://Sources/Fonts/Sriracha-Regular.ttf" id="1_jlcee"]
+[ext_resource type="Script" path="res://Scripts/UI/score.gd" id="1_sefc0"]
+[ext_resource type="FontFile" uid="uid://dqp4nvjk7nnxx" path="res://Sources/Fonts/Kodchasan-Bold.ttf" id="2_fn6ip"]
+
+[node name="Score" type="Node2D"]
+script = ExtResource("1_sefc0")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 507.0
+offset_bottom = 171.0
+theme_override_fonts/font = ExtResource("2_fn6ip")
+theme_override_font_sizes/font_size = 96
+text = "SCORE:"
+vertical_alignment = 1
+
+[node name="Point" type="Label" parent="."]
+layout_direction = 2
+offset_left = 400.0
+offset_top = -32.0
+offset_right = 616.0
+offset_bottom = 199.0
+theme_override_fonts/font = ExtResource("1_jlcee")
+theme_override_font_sizes/font_size = 128
+text = "0"
+vertical_alignment = 1
