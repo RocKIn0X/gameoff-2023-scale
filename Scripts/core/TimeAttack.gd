@@ -15,7 +15,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if !is_running: return
-	print(current)
 	current -= delta
 	current = clampf(current, 0, timeout)
 	_update_bar();
@@ -33,4 +32,3 @@ func _set_running(running):
 
 func _update_bar():
 	progress_bar.value = (current / timeout) * progress_bar.max_value;
-	print(progress_bar.value)
