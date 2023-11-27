@@ -20,7 +20,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l34mk"]
-size = Vector2(351.875, 170)
+size = Vector2(168, 392.001)
 
 [node name="Sharpener" type="Node2D" node_paths=PackedStringArray("hitbox", "animated")]
 script = ExtResource("1_b4mmg")
@@ -29,13 +29,12 @@ animated = NodePath("Whet")
 
 [node name="Whet" type="AnimatedSprite2D" parent="."]
 position = Vector2(650, 502.5)
-rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_r6rqq")
 
 [node name="Hitbox" type="Area2D" parent="Whet"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Whet/Hitbox"]
-position = Vector2(-5.93726, 2.5)
+position = Vector2(1.99994, -2.5)
 scale = Vector2(0.999999, 0.999999)
 shape = SubResource("RectangleShape2D_l34mk")
 
