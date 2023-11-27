@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ceipbtt5snt3i"]
+[gd_scene load_steps=14 format=3 uid="uid://ceipbtt5snt3i"]
 
 [ext_resource type="Script" path="res://Scripts/fishes/fish_order.gd" id="1_5ef54"]
 [ext_resource type="PackedScene" uid="uid://dutvhlafcne2p" path="res://Scenes/Fishes/fish.tscn" id="2_fi36p"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dcjxjw0e1gu1r" path="res://Scenes/Fishes/fish3.tscn" id="5_ftjg2"]
 [ext_resource type="PackedScene" uid="uid://2io55v5ptaa1" path="res://Scenes/Fishes/fish4.tscn" id="6_h4o0d"]
 [ext_resource type="PackedScene" uid="uid://d1vlq6maq1kfd" path="res://Scenes/Fishes/fish5.tscn" id="7_7noea"]
+[ext_resource type="Texture2D" uid="uid://bw4n3plonc8de" path="res://Sources/Sprites/BG/cutting board_001.png" id="8_rcqs7"]
 
 [sub_resource type="Resource" id="Resource_ldn86"]
 script = ExtResource("3_x0bar")
@@ -33,6 +34,11 @@ script = ExtResource("3_x0bar")
 rate = 5
 fish = ExtResource("7_7noea")
 
-[node name="FishOrder" type="Node2D"]
+[node name="FishOrder" type="Node2D" node_paths=PackedStringArray("board")]
 script = ExtResource("1_5ef54")
 fishes = Array[ExtResource("3_x0bar")]([SubResource("Resource_ldn86"), SubResource("Resource_f10dn"), SubResource("Resource_7oaqq"), SubResource("Resource_1bv0y"), SubResource("Resource_l13jf")])
+board = NodePath("CuttingBoard001")
+
+[node name="CuttingBoard001" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("8_rcqs7")

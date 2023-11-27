@@ -2,6 +2,7 @@ extends Node2D
 
 @export var fishes: Array[FishData];
 @export var orderLength = 4
+@export var board: Node2D;
 
 var gacha: Gacha;
 var order: Array[FishData]
@@ -24,11 +25,12 @@ func _ready():
 
 func next():
 	var current = pop().instantiate()
-	add_child(current)
+	board.add_child(current)
+	board.position = spawn_pos;
 	current.onFinished.connect(onFishFinished)
-	current.position = spawn_pos
+	current.position = Vector2(0,0)
 	var tween = create_tween()
-	tween.tween_property(current, "position", center_pos, 1)
+	tween.tween_property(board, "position", center_pos, 1)
 	tween.tween_callback(func(): current._setup_scale())
 	current.onFinished.connect(onFishFinished)
 
@@ -40,5 +42,7 @@ func pop():
 
 func onFishFinished(fish):
 	var tween = create_tween()
-	tween.tween_property(fish, "position", finish_pos, 1)
-	tween.tween_callback(func(): next())
+	tween.tween_property(board, "position", finish_pos, 1)
+	tween.tween_callback(func():
+		fish.queue_free()
+		next())
