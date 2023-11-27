@@ -5,6 +5,7 @@ class_name Scale
 signal onDestroy(scale)
 
 @export var health: int = 2;
+@export var point: int = 1; 
 @export var sharpness_cost: int = 1;
 @export var hit_blink_ms: int = 500;
 @export var hit_color: Color
@@ -18,6 +19,8 @@ var trail : Node
 
 func _ready():
 	$AnimatedSprite2D.play("idle")
+
+func get_point(): return point;
 
 func hit():
 	if is_fx:

@@ -27,6 +27,8 @@ func _setup_scale():
 
 func _remove_scale(scale):
 	scaleLeft -= 1;
+	var cur = VarManager.get_data(Varkey.F_SCORE_VAL);
+	VarManager.set_data(Varkey.F_SCORE_VAL, cur + scale.get_point());
 	if scaleLeft <= 0:
 		var count = $AnimatedSprite2D.sprite_frames.get_frame_count("done")
 		$AnimatedSprite2D.play("done")
