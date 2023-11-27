@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b24adklk3lqag"]
+[gd_scene load_steps=5 format=3 uid="uid://dhrkixtahjts3"]
 
 [ext_resource type="Script" path="res://Scripts/scales/scale_holder.gd" id="1_khx5i"]
 [ext_resource type="Texture2D" uid="uid://c3yy4gmv3brun" path="res://Sources/Sprites/Fish/3/Fish_mis_Scales_S01_A1_N_N.png" id="2_ujuuc"]

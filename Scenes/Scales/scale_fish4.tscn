@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://cgpbarx7npjh2"]
+
+[ext_resource type="Script" path="res://Scripts/scales/scale_v2.gd" id="1_3b5su"]
+[ext_resource type="PackedScene" uid="uid://c0rlm0qh78tmx" path="res://Scenes/trail_effect.tscn" id="2_rbley"]
+[ext_resource type="Texture2D" uid="uid://ch6mamymt3k3s" path="res://Sources/Sprites/Fish/4/Fish_big_Scales_S01_A2_N_N.png" id="3_ib5sp"]
+[ext_resource type="Texture2D" uid="uid://cf2j22o2xi6jp" path="res://Sources/Sprites/Fish/4/Fish_big_Scales_S01_A2_S_N.png" id="4_fejvw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3d7x3"]
+size = Vector2(80, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rhsib"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ib5sp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fejvw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="ScaleFish4" type="RigidBody2D" groups=["scales"]]
+collision_mask = 0
+input_pickable = true
+gravity_scale = 0.0
+contact_monitor = true
+freeze_mode = 1
+script = ExtResource("1_3b5su")
+hit_blink_ms = 100
+hit_color = Color(0.678431, 0, 0, 1)
+bounce_force = 300000.0
+trail_prefab = ExtResource("2_rbley")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3d7x3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rhsib")
+animation = &"idle"
+frame_progress = 0.705155
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
