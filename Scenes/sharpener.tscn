@@ -1,25 +1,41 @@
-[gd_scene load_steps=5 format=3 uid="uid://rwnwg37k1ddb"]
+[gd_scene load_steps=7 format=3 uid="uid://rwnwg37k1ddb"]
 
 [ext_resource type="Script" path="res://Scripts/sharpener.gd" id="1_b4mmg"]
-[ext_resource type="Texture2D" uid="uid://do11swbah5kst" path="res://Sources/Sprites/Sharpener/whet.png" id="1_vfrrv"]
+[ext_resource type="Texture2D" uid="uid://b0fbjnrbbo4so" path="res://Sources/Sprites/Sharpener/knife sharpening stone_001_A1.png" id="2_5w807"]
 [ext_resource type="PackedScene" uid="uid://cc4sm3t5auifs" path="res://Scenes/sharpness_gauge.tscn" id="3_8yhdy"]
+[ext_resource type="Texture2D" uid="uid://b8jlcyh3gdv1h" path="res://Sources/Sprites/Sharpener/knife sharpening stone_001_A2.png" id="3_wcl4c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r6rqq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5w807")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wcl4c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l34mk"]
-size = Vector2(313.75, 656.562)
+size = Vector2(351.875, 170)
 
-[node name="Sharpener" type="Node2D" node_paths=PackedStringArray("hitbox")]
-scale = Vector2(0.8, 0.8)
+[node name="Sharpener" type="Node2D" node_paths=PackedStringArray("hitbox", "animated")]
 script = ExtResource("1_b4mmg")
 hitbox = NodePath("Whet/Hitbox")
+animated = NodePath("Whet")
 
-[node name="Whet" type="Sprite2D" parent="."]
+[node name="Whet" type="AnimatedSprite2D" parent="."]
 position = Vector2(650, 502.5)
-texture = ExtResource("1_vfrrv")
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_r6rqq")
 
 [node name="Hitbox" type="Area2D" parent="Whet"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Whet/Hitbox"]
-position = Vector2(-25.0001, -102.5)
+position = Vector2(-5.93726, 2.5)
 scale = Vector2(0.999999, 0.999999)
 shape = SubResource("RectangleShape2D_l34mk")
 

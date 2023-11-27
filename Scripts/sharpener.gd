@@ -6,10 +6,12 @@ const SHARPNESS_KEY = Varkey.F_SHARPNESS_VAL
 @onready var _cursor_pos := Vector2.ONE * -1
 
 @export var hitbox: CollisionObject2D
+@export var animated: AnimatedSprite2D
 
 func _ready():
 	hitbox.mouse_entered.connect(_on_mouse_entered)
 	hitbox.mouse_exited.connect(_on_mouse_left)
+	animated.play("default")
 	#Debug.set_sharpness(0.0)
 
 func _on_mouse_entered():
