@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://rwnwg37k1ddb"]
+[gd_scene load_steps=8 format=3 uid="uid://rwnwg37k1ddb"]
 
 [ext_resource type="Script" path="res://Scripts/sharpener.gd" id="1_b4mmg"]
 [ext_resource type="Texture2D" uid="uid://b0fbjnrbbo4so" path="res://Sources/Sprites/Sharpener/knife sharpening stone_001_A1.png" id="2_5w807"]
+[ext_resource type="Texture2D" uid="uid://5vxbc7w6dusx" path="res://Sources/Sprites/Sharpener/table_knife_sharpening stone_001.png" id="2_lfgs2"]
 [ext_resource type="PackedScene" uid="uid://cc4sm3t5auifs" path="res://Scenes/sharpness_gauge.tscn" id="3_8yhdy"]
 [ext_resource type="Texture2D" uid="uid://b8jlcyh3gdv1h" path="res://Sources/Sprites/Sharpener/knife sharpening stone_001_A2.png" id="3_wcl4c"]
 
@@ -27,8 +28,11 @@ script = ExtResource("1_b4mmg")
 hitbox = NodePath("Whet/Hitbox")
 animated = NodePath("Whet")
 
+[node name="TableKnifeSharpeningStone001" type="Sprite2D" parent="."]
+texture = ExtResource("2_lfgs2")
+
 [node name="Whet" type="AnimatedSprite2D" parent="."]
-position = Vector2(650, 502.5)
+position = Vector2(0, -80)
 sprite_frames = SubResource("SpriteFrames_r6rqq")
 
 [node name="Hitbox" type="Area2D" parent="Whet"]

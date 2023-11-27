@@ -17,7 +17,7 @@
 position = Vector2(48, 700)
 
 [node name="Sharpener" parent="." instance=ExtResource("4_5txwc")]
-position = Vector2(1100, 0)
+position = Vector2(1730, 528)
 
 [node name="ScaleRemover" parent="." instance=ExtResource("2_52a01")]
 position = Vector2(289.775, 209.902)
