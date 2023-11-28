@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0w72qehlbb8r"]
+
+[ext_resource type="Script" path="res://Scripts/fever_overlay.gd" id="1_biag6"]
+[ext_resource type="Texture2D" uid="uid://4rw3oxoucwxp" path="res://Sources/Sprites/UI/fever_gradiant_overlay.png" id="2_qkuki"]
+
+[node name="FeverOverlay" type="Node2D"]
+script = ExtResource("1_biag6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_qkuki")
+centered = false

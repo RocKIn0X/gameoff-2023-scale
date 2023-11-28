@@ -29,6 +29,11 @@ func _remove_scale(scale):
 	scaleLeft -= 1;
 	var cur = VarManager.get_data(Varkey.F_SCORE_VAL);
 	VarManager.set_data(Varkey.F_SCORE_VAL, cur + scale.get_point());
+	if not VarManager.get_data(Varkey.B_IS_FEVER):
+		var new_fever = min(GameConst.F_FEVER_MAX, VarManager.get_data(Varkey.F_FEVER_VAL) + scale.get_point());
+		VarManager.set_data(Varkey.F_FEVER_VAL, new_fever);
+		if new_fever >= GameConst.F_FEVER_MAX:
+			VarManager.set_data(Varkey.B_IS_FEVER, true);
 	if scaleLeft <= 0:
 		var count = $AnimatedSprite2D.sprite_frames.get_frame_count("done")
 		$AnimatedSprite2D.play("done")

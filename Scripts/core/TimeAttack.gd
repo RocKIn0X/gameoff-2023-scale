@@ -21,6 +21,13 @@ func _process(delta):
 	if (current <= 0):
 		_set_running(false)
 		on_timeout.emit()
+	print(VarManager.get_data(Varkey.B_IS_FEVER))
+	print(VarManager.get_data(Varkey.F_FEVER_VAL))
+	if VarManager.get_data(Varkey.B_IS_FEVER):
+		var new_fever = max(0.0, VarManager.get_data(Varkey.F_FEVER_VAL) - (GameConst.F_FEVER_LOSS_RATE * delta))
+		VarManager.set_data(Varkey.F_FEVER_VAL, new_fever)
+		if new_fever <= 0.0:
+			VarManager.set_data(Varkey.B_IS_FEVER, false)
 
 func _start():
 	is_running = true

@@ -21,11 +21,13 @@ VarManager="*res://Scripts/lib/var_manager.gd"
 GameInit="*res://Scripts/game_init.gd"
 GameCalculation="*res://Scripts/game_calculation.gd"
 Debug="*res://Scripts/debug.gd"
+SoundManager="*res://Scripts/core/sound_manager.gd"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/stretch/mode="viewport"
 
 [rendering]
 
