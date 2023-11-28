@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://f5a5t2fklaco"]
+
+[ext_resource type="Texture2D" uid="uid://cwffeb3q76t2h" path="res://Sources/Sprites/UI/Lobby/BG_001.png" id="1_ubyuo"]
+[ext_resource type="Script" path="res://Scripts/UI/lobby.gd" id="1_uuehx"]
+[ext_resource type="Texture2D" uid="uid://cbxpdrljdxj7f" path="res://Sources/Sprites/UI/Lobby/Text_BG_A01.png" id="2_jg2ti"]
+[ext_resource type="FontFile" uid="uid://dqp4nvjk7nnxx" path="res://Sources/Fonts/Kodchasan-Bold.ttf" id="2_jl3r2"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_uuehx")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_ubyuo")
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 150.0
+offset_top = -212.0
+offset_right = 594.0
+offset_bottom = 235.0
+grow_vertical = 2
+
+[node name="Play" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_jg2ti")
+
+[node name="Play" type="Button" parent="VBoxContainer/Play"]
+layout_mode = 2
+offset_top = 6.645
+offset_right = 444.0
+offset_bottom = 98.645
+theme_override_colors/font_color = Color(0.294118, 0.294118, 0.294118, 1)
+theme_override_fonts/font = ExtResource("2_jl3r2")
+theme_override_font_sizes/font_size = 64
+text = "Play"
+flat = true
+
+[node name="HowToPlay" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.294118, 0.294118, 0.294118, 1)
+theme_override_colors/font_pressed_color = Color(0.654902, 0.654902, 0.654902, 1)
+theme_override_fonts/font = ExtResource("2_jl3r2")
+theme_override_font_sizes/font_size = 45
+text = "How To Play"
+flat = true
+
+[node name="Credits" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.294118, 0.294118, 0.294118, 1)
+theme_override_colors/font_pressed_color = Color(0.654902, 0.654902, 0.654902, 1)
+theme_override_fonts/font = ExtResource("2_jl3r2")
+theme_override_font_sizes/font_size = 45
+text = "Credits
+"
+flat = true
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.294118, 0.294118, 0.294118, 1)
+theme_override_colors/font_pressed_color = Color(0.654902, 0.654902, 0.654902, 1)
+theme_override_fonts/font = ExtResource("2_jl3r2")
+theme_override_font_sizes/font_size = 45
+text = "Quit
+"
+flat = true
+
+[connection signal="pressed" from="VBoxContainer/Play/Play" to="." method="_on_play_pressed"]
