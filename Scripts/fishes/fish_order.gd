@@ -32,7 +32,7 @@ func next():
 	var tween = create_tween()
 	tween.tween_property(board, "position", center_pos, 1)
 	tween.tween_callback(func(): current._setup_scale())
-	current.onFinished.connect(onFishFinished)
+	SoundManager._play_sfx(SoundManager.SfxType.Swoosh)
 
 func pop():
 	var entry = order.front()
@@ -46,3 +46,4 @@ func onFishFinished(fish):
 	tween.tween_callback(func():
 		fish.queue_free()
 		next())
+	SoundManager._play_sfx(SoundManager.SfxType.Swoosh)

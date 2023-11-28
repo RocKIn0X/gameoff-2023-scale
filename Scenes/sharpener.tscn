@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://rwnwg37k1ddb"]
+[gd_scene load_steps=9 format=3 uid="uid://rwnwg37k1ddb"]
 
 [ext_resource type="Script" path="res://Scripts/sharpener.gd" id="1_b4mmg"]
 [ext_resource type="Texture2D" uid="uid://b0fbjnrbbo4so" path="res://Sources/Sprites/Sharpener/knife sharpening stone_001_A1.png" id="2_5w807"]
 [ext_resource type="Texture2D" uid="uid://5vxbc7w6dusx" path="res://Sources/Sprites/Sharpener/table_knife_sharpening stone_001.png" id="2_lfgs2"]
 [ext_resource type="PackedScene" uid="uid://cc4sm3t5auifs" path="res://Scenes/sharpness_gauge.tscn" id="3_8yhdy"]
 [ext_resource type="Texture2D" uid="uid://b8jlcyh3gdv1h" path="res://Sources/Sprites/Sharpener/knife sharpening stone_001_A2.png" id="3_wcl4c"]
+[ext_resource type="AudioStream" uid="uid://c3jwrlcsmsjcl" path="res://Sources/Sounds/sharpening.mp3" id="6_xl1cr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r6rqq"]
 animations = [{
@@ -53,5 +54,8 @@ offset_top = 21.25
 offset_right = 39.25
 offset_bottom = 29.25
 text = "Set sharpness 0"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_xl1cr")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed" binds= [0.0]]

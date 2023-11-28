@@ -37,6 +37,7 @@ func hit():
 		VarManager.set_data(Varkey.F_SHARPNESS_VAL, sharpness)
 	if health <= 0:
 		_to_fx()
+	SoundManager._play_sfx(SoundManager.SfxType.Scaling)
 
 func _set_scale(x, y):
 	$CollisionShape2D.scale = Vector2(x, y)
