@@ -9,22 +9,28 @@
 [node name="TimeAttack" type="Node2D" node_paths=PackedStringArray("progress_bar")]
 script = ExtResource("1_wjs5a")
 timeout = 120.0
-progress_bar = NodePath("TextureProgressBar")
+progress_bar = NodePath("TimeFeverT2Ui/TextureProgressBar")
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+[node name="TimeFeverT2Ui" type="Sprite2D" parent="."]
+position = Vector2(960, 104)
+texture = ExtResource("2_20gvr")
+
+[node name="TimeFeverT5Ui" type="Sprite2D" parent="TimeFeverT2Ui"]
+texture = ExtResource("2_kko30")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="TimeFeverT2Ui"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 224.0
-offset_right = 1696.0
-offset_bottom = 208.0
+offset_left = -1347.0
+offset_top = -80.0
+offset_right = 125.0
+offset_bottom = 128.0
 grow_horizontal = 2
 max_value = 10000.0
 value = 10000.0
-texture_under = ExtResource("2_20gvr")
-texture_over = ExtResource("2_kko30")
 texture_progress = ExtResource("3_nepai")
 
-[node name="TimeUi" type="Sprite2D" parent="."]
-position = Vector2(440, 80)
+[node name="TimeUi2" type="Sprite2D" parent="TimeFeverT2Ui"]
+position = Vector2(-520, -24)
 texture = ExtResource("4_u0hsu")
