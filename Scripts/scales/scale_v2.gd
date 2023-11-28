@@ -29,11 +29,12 @@ func hit():
 	if current_sharpness <= 0: return
 	health -= GameCalculation.get_attack_power()
 	hit_time = Time.get_unix_time_from_system()
-	var sharpness = max(
-		current_sharpness
-		- (GameCalculation.get_sharpness_loss_rate() * sharpness_cost)
-	, 0.0)
-	VarManager.set_data(Varkey.F_SHARPNESS_VAL, sharpness)
+	if not VarManager.get_data(Varkey.B_IS_FEVER):
+		var sharpness = max(
+			current_sharpness
+			- (GameCalculation.get_sharpness_loss_rate() * sharpness_cost)
+		, 0.0)
+		VarManager.set_data(Varkey.F_SHARPNESS_VAL, sharpness)
 	if health <= 0:
 		_to_fx()
 
