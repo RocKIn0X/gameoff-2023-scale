@@ -11,11 +11,13 @@ signal onDestroy(scale)
 @export var hit_color: Color
 @export var bounce_force: float = 50000.0
 @export var bounce_ms: int = 500;
-@export var trail_prefab: PackedScene
+@export var trail_prefab: PackedScene;
+@export var point_prefab: PackedScene;
 
 var is_fx := false
 var hit_time: float
 var trail : Node
+var point_fx : Node
 
 func _ready():
 	$AnimatedSprite2D.play("idle")
@@ -53,9 +55,14 @@ func _to_fx():
 	apply_force(rand_force)
 	trail = trail_prefab.instantiate()
 	trail.tracked_object = self
-	trail.position = Vector2(0, 0)
-	trail.global_position = Vector2(0, 0)
+	trail.position = Vector2.ZERO
+	trail.global_position = Vector2.ZERO
+	point_fx = point_prefab.instantiate()
+	point_fx.points_val = get_point()
+	point_fx.position = Vector2.ZERO
+	point_fx.global_position = global_position
 	$"..".add_child(trail)
+	$"/root".add_child(point_fx)
 	reparent(get_tree().root) # Override masking
 
 
