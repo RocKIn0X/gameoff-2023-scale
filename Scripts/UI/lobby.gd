@@ -1,4 +1,4 @@
 extends Node
 
 func _on_play_pressed():
-	print("play pressed");
+	get_tree().change_scene_to_file("res://Scenes/main.tscn")

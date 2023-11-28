@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://f5a5t2fklaco"]
+[gd_scene load_steps=7 format=3 uid="uid://f5a5t2fklaco"]
 
 [ext_resource type="Texture2D" uid="uid://cwffeb3q76t2h" path="res://Sources/Sprites/UI/Lobby/BG_001.png" id="1_ubyuo"]
 [ext_resource type="Script" path="res://Scripts/UI/lobby.gd" id="1_uuehx"]
 [ext_resource type="Texture2D" uid="uid://cbxpdrljdxj7f" path="res://Sources/Sprites/UI/Lobby/Text_BG_A01.png" id="2_jg2ti"]
 [ext_resource type="FontFile" uid="uid://dqp4nvjk7nnxx" path="res://Sources/Fonts/Kodchasan-Bold.ttf" id="2_jl3r2"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q47cw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j58xy"]
+
+[node name="Lobby" type="CanvasLayer"]
 script = ExtResource("1_uuehx")
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -33,26 +37,36 @@ offset_top = 6.645
 offset_right = 444.0
 offset_bottom = 98.645
 theme_override_colors/font_color = Color(0.294118, 0.294118, 0.294118, 1)
+theme_override_colors/font_pressed_color = Color(0.294118, 0.294118, 0.294118, 1)
+theme_override_colors/font_hover_color = Color(0.92549, 0.92549, 0.92549, 1)
+theme_override_colors/font_focus_color = Color(0.294118, 0.294118, 0.294118, 1)
 theme_override_fonts/font = ExtResource("2_jl3r2")
 theme_override_font_sizes/font_size = 64
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q47cw")
 text = "Play"
 flat = true
 
 [node name="HowToPlay" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.294118, 0.294118, 0.294118, 1)
-theme_override_colors/font_pressed_color = Color(0.654902, 0.654902, 0.654902, 1)
+theme_override_colors/font_pressed_color = Color(0.294118, 0.294118, 0.294118, 1)
+theme_override_colors/font_hover_color = Color(0.92549, 0.92549, 0.92549, 1)
+theme_override_colors/font_focus_color = Color(0.294118, 0.294118, 0.294118, 1)
 theme_override_fonts/font = ExtResource("2_jl3r2")
 theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q47cw")
 text = "How To Play"
 flat = true
 
 [node name="Credits" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.294118, 0.294118, 0.294118, 1)
-theme_override_colors/font_pressed_color = Color(0.654902, 0.654902, 0.654902, 1)
+theme_override_colors/font_pressed_color = Color(0.294118, 0.294118, 0.294118, 1)
+theme_override_colors/font_hover_color = Color(0.92549, 0.92549, 0.92549, 1)
+theme_override_colors/font_focus_color = Color(0.294118, 0.294118, 0.294118, 1)
 theme_override_fonts/font = ExtResource("2_jl3r2")
 theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxEmpty_j58xy")
 text = "Credits
 "
 flat = true
@@ -60,9 +74,12 @@ flat = true
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.294118, 0.294118, 0.294118, 1)
-theme_override_colors/font_pressed_color = Color(0.654902, 0.654902, 0.654902, 1)
+theme_override_colors/font_pressed_color = Color(0.294118, 0.294118, 0.294118, 1)
+theme_override_colors/font_hover_color = Color(0.92549, 0.92549, 0.92549, 1)
+theme_override_colors/font_focus_color = Color(0.294118, 0.294118, 0.294118, 1)
 theme_override_fonts/font = ExtResource("2_jl3r2")
 theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q47cw")
 text = "Quit
 "
 flat = true
