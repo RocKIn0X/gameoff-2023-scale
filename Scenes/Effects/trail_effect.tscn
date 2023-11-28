@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c0rlm0qh78tmx"]
 
-[ext_resource type="Script" path="res://Scripts/trail.gd" id="1_vwuoc"]
+[ext_resource type="Script" path="res://Scripts/trail.gd" id="1_ae4gc"]
 
 [sub_resource type="Curve" id="Curve_8hm61"]
 _data = [Vector2(0, 0), 0.0, 3.05195, 0, 1, Vector2(0.28972, 0.88421), 0.543739, 0.543739, 0, 0, Vector2(0.995327, 1), 0.0, 0.0, 0, 0]
@@ -18,7 +18,7 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 width_curve = SubResource("Curve_8hm61")
 default_color = Color(1, 0, 0, 1)
 gradient = SubResource("Gradient_4sy64")
-script = ExtResource("1_vwuoc")
+script = ExtResource("1_ae4gc")
 MAX_LENGTH = 20
 fever_gradiant = SubResource("Gradient_4sy64")
 normal_gradiant = SubResource("Gradient_8fnk3")
