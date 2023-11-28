@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dnwxm4q2m7q1i"]
+[gd_scene load_steps=7 format=3 uid="uid://dnwxm4q2m7q1i"]
 
 [ext_resource type="Script" path="res://Scripts/scales/scale_v2.gd" id="1_mrqpy"]
-[ext_resource type="PackedScene" uid="uid://c0rlm0qh78tmx" path="res://Scenes/Effects/trail_effect.tscn" id="2_7cyjs"]
+[ext_resource type="PackedScene" uid="uid://c0rlm0qh78tmx" path="res://Scenes/trail_effect.tscn" id="2_n780w"]
 [ext_resource type="Texture2D" uid="uid://btgoq1ljnqipe" path="res://Sources/Sprites/Fish/1/Scales/Fish Scales_S01_A1_N_N.png" id="3_kovmw"]
-[ext_resource type="PackedScene" uid="uid://cugwoxcqlbphj" path="res://Scenes/Effects/point_effect.tscn" id="3_ufr6k"]
 [ext_resource type="Texture2D" uid="uid://xskpyc8hkpfi" path="res://Sources/Sprites/Fish/1/Scales/Fish Scales_S01_A2_N_N.png" id="4_b7n6b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ohwa4"]
@@ -33,8 +32,7 @@ script = ExtResource("1_mrqpy")
 hit_blink_ms = 100
 hit_color = Color(0.678431, 0, 0, 1)
 bounce_force = 300000.0
-trail_prefab = ExtResource("2_7cyjs")
-point_prefab = ExtResource("3_ufr6k")
+trail_prefab = ExtResource("2_n780w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ohwa4")

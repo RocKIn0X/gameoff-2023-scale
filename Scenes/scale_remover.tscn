@@ -13,10 +13,9 @@ normal = ExtResource("2_nc1qf")
 broken = ExtResource("3_8dra4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(12, 23)
+position = Vector2(4.76837e-07, 0)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_2igi5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(11, 23)
 texture = ExtResource("2_nc1qf")
