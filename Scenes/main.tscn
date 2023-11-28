@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c1plbnxnqxtwb"]
+[gd_scene load_steps=10 format=3 uid="uid://c1plbnxnqxtwb"]
 
 [ext_resource type="PackedScene" uid="uid://fdnufyf5diu" path="res://Scenes/Core/Background.tscn" id="1_vmvh4"]
 [ext_resource type="PackedScene" uid="uid://ccxnlbpb51cve" path="res://Scenes/scale_remover.tscn" id="2_52a01"]
@@ -6,14 +6,18 @@
 [ext_resource type="PackedScene" uid="uid://cc4sm3t5auifs" path="res://Scenes/sharpness_gauge.tscn" id="3_2vqgb"]
 [ext_resource type="PackedScene" uid="uid://rwnwg37k1ddb" path="res://Scenes/sharpener.tscn" id="4_5txwc"]
 [ext_resource type="PackedScene" uid="uid://b442d4hpgbvm3" path="res://Scenes/Core/TimeAttack.tscn" id="5_is0el"]
+[ext_resource type="PackedScene" uid="uid://c0rlm0qh78tmx" path="res://Scenes/Effects/trail_effect.tscn" id="6_d8mce"]
 [ext_resource type="PackedScene" uid="uid://dr7afkbv7y5iq" path="res://Scenes/Core/score.tscn" id="7_iv48o"]
-[ext_resource type="PackedScene" path="res://Scenes/fever_overlay.tscn" id="9_dmdta"]
+[ext_resource type="PackedScene" uid="uid://c0w72qehlbb8r" path="res://Scenes/fever_overlay.tscn" id="9_dmdta"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Background" parent="." instance=ExtResource("1_vmvh4")]
 
 [node name="FishOrder" parent="." instance=ExtResource("2_q3y52")]
+
+[node name="TrailEffect" parent="." node_paths=PackedStringArray("tracked_object") instance=ExtResource("6_d8mce")]
+tracked_object = NodePath("../ScaleRemover")
 
 [node name="SharpnessGauge" parent="." instance=ExtResource("3_2vqgb")]
 position = Vector2(125, 464)
