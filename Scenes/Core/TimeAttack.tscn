@@ -1,15 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://b442d4hpgbvm3"]
+[gd_scene load_steps=7 format=3 uid="uid://b442d4hpgbvm3"]
 
 [ext_resource type="Script" path="res://Scripts/core/TimeAttack.gd" id="1_wjs5a"]
 [ext_resource type="Texture2D" uid="uid://wf48ntnb3l8c" path="res://Sources/Sprites/UI/Time Fever_T5_Ui.png" id="2_20gvr"]
 [ext_resource type="Texture2D" uid="uid://bel6rpc7bd0hj" path="res://Sources/Sprites/UI/Time Fever_T2_Ui.png" id="2_kko30"]
-[ext_resource type="Texture2D" uid="uid://cuwamqi1ileb1" path="res://Sources/Sprites/UI/Time Fever_T4_Ui.png" id="3_nepai"]
+[ext_resource type="PackedScene" uid="uid://bidpbctoqtw3j" path="res://Scenes/time_gauge.tscn" id="4_esv53"]
 [ext_resource type="Texture2D" uid="uid://bqv2n3nw5m73p" path="res://Sources/Sprites/UI/Time_Ui.png" id="4_u0hsu"]
+[ext_resource type="PackedScene" uid="uid://b1mjthp8wllay" path="res://Scenes/fever_gauge.tscn" id="5_3t3ik"]
 
-[node name="TimeAttack" type="Node2D" node_paths=PackedStringArray("progress_bar")]
+[node name="TimeAttack" type="Node2D"]
 script = ExtResource("1_wjs5a")
-timeout = 120.0
-progress_bar = NodePath("TimeFeverT2Ui/TextureProgressBar")
 
 [node name="TimeFeverT2Ui" type="Sprite2D" parent="."]
 position = Vector2(960, 104)
@@ -18,18 +17,19 @@ texture = ExtResource("2_20gvr")
 [node name="TimeFeverT5Ui" type="Sprite2D" parent="TimeFeverT2Ui"]
 texture = ExtResource("2_kko30")
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="TimeFeverT2Ui"]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -1347.0
+[node name="TimeGauge" parent="TimeFeverT2Ui" instance=ExtResource("4_esv53")]
+offset_left = -611.0
 offset_top = -80.0
-offset_right = 125.0
-offset_bottom = 128.0
-grow_horizontal = 2
-max_value = 10000.0
+offset_right = 420.0
+offset_bottom = 34.0
 value = 10000.0
-texture_progress = ExtResource("3_nepai")
+
+[node name="FeverGauge" parent="TimeFeverT2Ui" instance=ExtResource("5_3t3ik")]
+offset_left = -426.0
+offset_top = -82.0
+offset_right = 620.0
+offset_bottom = 34.0
+value = 10000.0
 
 [node name="TimeUi2" type="Sprite2D" parent="TimeFeverT2Ui"]
 position = Vector2(-520, -24)

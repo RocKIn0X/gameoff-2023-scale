@@ -1,18 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpqwkwln2m3bn"]
+[gd_scene load_steps=3 format=3 uid="uid://b1mjthp8wllay"]
 
+[ext_resource type="Texture2D" uid="uid://e1lahhsvmb0h" path="res://Sources/Sprites/UI/Time Fever_T3_Ui.png" id="1_2qmql"]
 [ext_resource type="Script" path="res://Scripts/fever_gauge.gd" id="1_xb37m"]
 
-[node name="FeverGauge" type="Node2D" node_paths=PackedStringArray("gauge_line")]
+[node name="FeverGauge" type="TextureProgressBar"]
+max_value = 10000.0
+value = 10000.0
+fill_mode = 1
+texture_progress = ExtResource("1_2qmql")
 script = ExtResource("1_xb37m")
-gauge_line = NodePath("GaugeBar")
-gauge_normal_color = Color(0, 0.788235, 0, 1)
-gauge_mid_color = Color(1, 1, 0.235294, 1)
-gauge_low_color = Color(1, 0, 0, 1)
-
-[node name="GaugeBar" type="Line2D" parent="."]
-points = PackedVector2Array(0, 0, 0, -400)
-width = 20.0
-default_color = Color(0.0392157, 0.713726, 0, 1)
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
