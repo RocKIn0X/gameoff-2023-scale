@@ -18,6 +18,8 @@ func __get_attack_upgrade_bonus():
 		return 0.0
 
 func get_attack_power() -> int:
+	if VarManager.get_data(Varkey.B_IS_FEVER):
+		return 1000
 	return round((GameConst.F_PLAYER_BASE_ATTACK_POWER + __get_attack_upgrade_bonus()) * __get_sharpness_mod())
 
 func get_sharpness_loss_rate():
