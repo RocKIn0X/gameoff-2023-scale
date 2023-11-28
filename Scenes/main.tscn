@@ -15,7 +15,6 @@
 [node name="FishOrder" parent="." instance=ExtResource("2_q3y52")]
 
 [node name="SharpnessGauge" parent="." instance=ExtResource("3_2vqgb")]
-position = Vector2(48, 700)
 
 [node name="Sharpener" parent="." instance=ExtResource("4_5txwc")]
 position = Vector2(1730, 528)
