@@ -25,7 +25,6 @@ begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="KnifeSharpnessT5Ui" type="Sprite2D" parent="."]
-position = Vector2(100, 540)
 texture = ExtResource("2_kq1bx")
 
 [node name="KnifeSharpnessT3Ui" type="Sprite2D" parent="KnifeSharpnessT5Ui"]
