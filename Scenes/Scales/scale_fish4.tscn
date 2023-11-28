@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/scales/scale_v2.gd" id="1_3b5su"]
 [ext_resource type="PackedScene" uid="uid://c0rlm0qh78tmx" path="res://Scenes/trail_effect.tscn" id="2_rbley"]
 [ext_resource type="Texture2D" uid="uid://ch6mamymt3k3s" path="res://Sources/Sprites/Fish/4/Fish_big_Scales_S01_A2_N_N.png" id="3_ib5sp"]
-[ext_resource type="Texture2D" uid="uid://cf2j22o2xi6jp" path="res://Sources/Sprites/Fish/4/Fish_big_Scales_S01_A2_S_N.png" id="4_fejvw"]
+[ext_resource type="Texture2D" uid="uid://clhixe3w11xmu" path="res://Sources/Sprites/Fish/4/Fish_big_Scales_S01_A1_N_N.png" id="3_l1vei"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3d7x3"]
 size = Vector2(80, 64)
@@ -12,10 +12,10 @@ size = Vector2(80, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_ib5sp")
+"texture": ExtResource("3_l1vei")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_fejvw")
+"texture": ExtResource("3_ib5sp")
 }],
 "loop": true,
 "name": &"idle",
