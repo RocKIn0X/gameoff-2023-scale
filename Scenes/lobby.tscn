@@ -85,3 +85,4 @@ text = "Quit
 flat = true
 
 [connection signal="pressed" from="VBoxContainer/Play/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
