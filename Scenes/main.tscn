@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://c1plbnxnqxtwb"]
+[gd_scene load_steps=11 format=3 uid="uid://c1plbnxnqxtwb"]
 
 [ext_resource type="PackedScene" uid="uid://fdnufyf5diu" path="res://Scenes/Core/Background.tscn" id="1_vmvh4"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_yafji"]
 [ext_resource type="PackedScene" uid="uid://ccxnlbpb51cve" path="res://Scenes/scale_remover.tscn" id="2_52a01"]
 [ext_resource type="PackedScene" uid="uid://ceipbtt5snt3i" path="res://Scenes/Fishes/fish_order.tscn" id="2_q3y52"]
 [ext_resource type="PackedScene" uid="uid://cc4sm3t5auifs" path="res://Scenes/sharpness_gauge.tscn" id="3_2vqgb"]
@@ -9,8 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://c0rlm0qh78tmx" path="res://Scenes/Effects/trail_effect.tscn" id="6_d8mce"]
 [ext_resource type="PackedScene" uid="uid://dr7afkbv7y5iq" path="res://Scenes/Core/score.tscn" id="7_iv48o"]
 [ext_resource type="PackedScene" uid="uid://c0w72qehlbb8r" path="res://Scenes/fever_overlay.tscn" id="9_dmdta"]
+[ext_resource type="PackedScene" path="res://Scenes/fever_overlay.tscn" id="10_dmdta"]
+[ext_resource type="PackedScene" uid="uid://vrqeuwy4ftpv" path="res://Scenes/result.tscn" id="11_sadv3"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_yafji")
 
 [node name="Background" parent="." instance=ExtResource("1_vmvh4")]
 
@@ -25,9 +29,6 @@ position = Vector2(125, 464)
 [node name="Sharpener" parent="." instance=ExtResource("4_5txwc")]
 position = Vector2(1730, 528)
 
-[node name="ScaleRemover" parent="." instance=ExtResource("2_52a01")]
-position = Vector2(289.775, 209.902)
-
 [node name="TimeAttack" parent="." instance=ExtResource("5_is0el")]
 
 [node name="Score" parent="." instance=ExtResource("7_iv48o")]
@@ -36,3 +37,8 @@ scale = Vector2(0.8, 0.8)
 
 [node name="FeverOverlay" parent="." instance=ExtResource("9_dmdta")]
 visible = false
+
+[node name="Result" parent="." instance=ExtResource("10_sadv3")]
+
+[node name="ScaleRemover" parent="." instance=ExtResource("2_52a01")]
+position = Vector2(289.775, 209.902)

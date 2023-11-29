@@ -27,6 +27,9 @@ func get_point(): return point;
 func hit():
 	if is_fx:
 		return
+	var is_paused = VarManager.get_data(Varkey.B_IS_PAUSED);
+	var is_ending = VarManager.get_data(Varkey.B_IS_ENDING);
+	if is_paused or is_ending: return
 	var current_sharpness = VarManager.get_data(Varkey.F_SHARPNESS_VAL);
 	if current_sharpness <= 0: return
 	health -= GameCalculation.get_attack_power()

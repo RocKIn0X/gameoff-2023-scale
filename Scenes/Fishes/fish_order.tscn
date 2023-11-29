@@ -40,5 +40,5 @@ fishes = Array[ExtResource("3_x0bar")]([SubResource("Resource_ldn86"), SubResour
 board = NodePath("CuttingBoard001")
 
 [node name="CuttingBoard001" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
+position = Vector2(-960, 540)
 texture = ExtResource("8_rcqs7")
