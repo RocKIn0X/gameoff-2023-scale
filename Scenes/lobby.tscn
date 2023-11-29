@@ -1,9 +1,72 @@
-[gd_scene load_steps=7 format=3 uid="uid://f5a5t2fklaco"]
+[gd_scene load_steps=18 format=3 uid="uid://f5a5t2fklaco"]
 
 [ext_resource type="Texture2D" uid="uid://cwffeb3q76t2h" path="res://Sources/Sprites/UI/Lobby/BG_001.png" id="1_ubyuo"]
 [ext_resource type="Script" path="res://Scripts/UI/lobby.gd" id="1_uuehx"]
 [ext_resource type="Texture2D" uid="uid://cbxpdrljdxj7f" path="res://Sources/Sprites/UI/Lobby/Text_BG_A01.png" id="2_jg2ti"]
 [ext_resource type="FontFile" uid="uid://dqp4nvjk7nnxx" path="res://Sources/Fonts/Kodchasan-Bold.ttf" id="2_jl3r2"]
+[ext_resource type="Texture2D" uid="uid://g6s52jyydk8d" path="res://Sources/Sprites/UI/Lobby/BG_002.png" id="3_rlsb7"]
+[ext_resource type="Texture2D" uid="uid://cjhn02tmi6nvh" path="res://Sources/Sprites/UI/Lobby/Effect_BG_A01.png" id="3_wc3o6"]
+[ext_resource type="Texture2D" uid="uid://bkahiir7u887v" path="res://Sources/Sprites/UI/Lobby/Effect_BG_A02.png" id="4_65tbu"]
+[ext_resource type="Texture2D" uid="uid://0k1s4v6bfg80" path="res://Sources/Sprites/UI/Lobby/Fish_BG_A01.png" id="5_50i13"]
+[ext_resource type="Texture2D" uid="uid://cppmjppp1itx3" path="res://Sources/Sprites/UI/Lobby/Fish_BG_A02.png" id="6_305vv"]
+[ext_resource type="Texture2D" uid="uid://v11hetvon2vm" path="res://Sources/Sprites/UI/Lobby/LOGO_A01.png" id="7_46lbq"]
+[ext_resource type="Texture2D" uid="uid://ctdbq4m4uub4o" path="res://Sources/Sprites/UI/Lobby/LOGO_A02.png" id="8_npvo2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oylpa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ubyuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rlsb7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6yn3d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_50i13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_305vv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qgl4s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_46lbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_npvo2")
+}],
+"loop": true,
+"name": &"LOGO",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p0y6i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_wc3o6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_65tbu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q47cw"]
 
@@ -12,19 +75,38 @@
 [node name="Lobby" type="CanvasLayer"]
 script = ExtResource("1_uuehx")
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="AnimatedSprite2D" parent="."]
 position = Vector2(960, 540)
-texture = ExtResource("1_ubyuo")
+sprite_frames = SubResource("SpriteFrames_oylpa")
+autoplay = "default"
 metadata/_edit_lock_ = true
+
+[node name="Fish" type="AnimatedSprite2D" parent="Background"]
+position = Vector2(82, 58)
+scale = Vector2(0.9, 0.9)
+sprite_frames = SubResource("SpriteFrames_6yn3d")
+autoplay = "default"
+
+[node name="LOGO" type="AnimatedSprite2D" parent="Background"]
+position = Vector2(-507, -249)
+scale = Vector2(0.9, 0.9)
+sprite_frames = SubResource("SpriteFrames_qgl4s")
+animation = &"LOGO"
+autoplay = "LOGO"
+
+[node name="Star" type="AnimatedSprite2D" parent="Background"]
+position = Vector2(138, -45)
+sprite_frames = SubResource("SpriteFrames_p0y6i")
+autoplay = "default"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 150.0
-offset_top = -212.0
-offset_right = 594.0
-offset_bottom = 235.0
+offset_left = 228.0
+offset_top = -54.0
+offset_right = 672.0
+offset_bottom = 393.0
 grow_vertical = 2
 
 [node name="Play" type="TextureRect" parent="VBoxContainer"]

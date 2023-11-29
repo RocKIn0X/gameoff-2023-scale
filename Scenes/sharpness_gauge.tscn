@@ -27,15 +27,6 @@ end_cap_mode = 2
 [node name="KnifeSharpnessT5Ui" type="Sprite2D" parent="."]
 texture = ExtResource("2_kq1bx")
 
-[node name="KnifeSharpnessT3Ui" type="Sprite2D" parent="KnifeSharpnessT5Ui"]
-texture = ExtResource("3_g2hsv")
-
-[node name="KnifeSharpnessT1Skin" type="Sprite2D" parent="KnifeSharpnessT5Ui"]
-texture = ExtResource("4_80i3b")
-
-[node name="KnifeSharpnessT2Skin" type="Sprite2D" parent="KnifeSharpnessT5Ui"]
-texture = ExtResource("5_cnmp6")
-
 [node name="TextureProgressBar" type="TextureProgressBar" parent="KnifeSharpnessT5Ui"]
 offset_left = -21.0
 offset_top = -258.0
@@ -44,3 +35,12 @@ offset_bottom = 292.0
 value = 100.0
 fill_mode = 3
 texture_progress = ExtResource("4_nshsl")
+
+[node name="KnifeSharpnessT3Ui" type="Sprite2D" parent="KnifeSharpnessT5Ui"]
+texture = ExtResource("3_g2hsv")
+
+[node name="KnifeSharpnessT1Skin" type="Sprite2D" parent="KnifeSharpnessT5Ui"]
+texture = ExtResource("4_80i3b")
+
+[node name="KnifeSharpnessT2Skin" type="Sprite2D" parent="KnifeSharpnessT5Ui"]
+texture = ExtResource("5_cnmp6")

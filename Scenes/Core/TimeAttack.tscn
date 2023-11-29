@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b442d4hpgbvm3"]
+[gd_scene load_steps=8 format=3 uid="uid://b442d4hpgbvm3"]
 
 [ext_resource type="Script" path="res://Scripts/core/TimeAttack.gd" id="1_wjs5a"]
 [ext_resource type="Texture2D" uid="uid://wf48ntnb3l8c" path="res://Sources/Sprites/UI/Time Fever_T5_Ui.png" id="2_20gvr"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bidpbctoqtw3j" path="res://Scenes/time_gauge.tscn" id="4_esv53"]
 [ext_resource type="Texture2D" uid="uid://bqv2n3nw5m73p" path="res://Sources/Sprites/UI/Time_Ui.png" id="4_u0hsu"]
 [ext_resource type="PackedScene" uid="uid://b1mjthp8wllay" path="res://Scenes/fever_gauge.tscn" id="5_3t3ik"]
+[ext_resource type="Texture2D" uid="uid://caqi236o1mbon" path="res://Sources/Sprites/UI/Time Fever_T1_Skin.png" id="7_duf4u"]
 
 [node name="TimeAttack" type="Node2D"]
 script = ExtResource("1_wjs5a")
@@ -32,3 +33,6 @@ offset_bottom = 34.0
 [node name="TimeUi2" type="Sprite2D" parent="TimeFeverT2Ui"]
 position = Vector2(-520, -24)
 texture = ExtResource("4_u0hsu")
+
+[node name="Sprite2D" type="Sprite2D" parent="TimeFeverT2Ui"]
+texture = ExtResource("7_duf4u")
