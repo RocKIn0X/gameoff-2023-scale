@@ -22,14 +22,12 @@ offset_left = -611.0
 offset_top = -80.0
 offset_right = 420.0
 offset_bottom = 34.0
-value = 10000.0
 
 [node name="FeverGauge" parent="TimeFeverT2Ui" instance=ExtResource("5_3t3ik")]
 offset_left = -426.0
 offset_top = -82.0
 offset_right = 620.0
 offset_bottom = 34.0
-value = 10000.0
 
 [node name="TimeUi2" type="Sprite2D" parent="TimeFeverT2Ui"]
 position = Vector2(-520, -24)

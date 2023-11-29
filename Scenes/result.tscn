@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://vrqeuwy4ftpv"]
+
+[ext_resource type="Script" path="res://Scripts/UI/result.gd" id="1_8hme1"]
+[ext_resource type="FontFile" uid="uid://dqp4nvjk7nnxx" path="res://Sources/Fonts/Kodchasan-Bold.ttf" id="1_pofn7"]
+
+[node name="Result" type="Node2D" node_paths=PackedStringArray("score", "restart", "mainmenu")]
+script = ExtResource("1_8hme1")
+score = NodePath("ScoreText2")
+restart = NodePath("Restart")
+mainmenu = NodePath("Menu")
+
+[node name="ScoreText" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 722.5
+offset_top = 288.0
+offset_right = 1197.5
+offset_bottom = 459.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_pofn7")
+theme_override_font_sizes/font_size = 96
+text = "SCORE"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="ScoreText2" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 722.5
+offset_top = 454.5
+offset_right = 1197.5
+offset_bottom = 625.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_pofn7")
+theme_override_font_sizes/font_size = 128
+text = "100"
+horizontal_alignment = 1
+
+[node name="Restart" type="Button" parent="."]
+offset_left = 776.0
+offset_top = 640.0
+offset_right = 1155.0
+offset_bottom = 774.0
+theme_override_fonts/font = ExtResource("1_pofn7")
+theme_override_font_sizes/font_size = 96
+text = "Restart"
+
+[node name="Menu" type="Button" parent="."]
+offset_left = 704.0
+offset_top = 832.0
+offset_right = 1245.0
+offset_bottom = 966.0
+theme_override_fonts/font = ExtResource("1_pofn7")
+theme_override_font_sizes/font_size = 96
+text = "Main Menu"

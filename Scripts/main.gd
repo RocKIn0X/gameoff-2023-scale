@@ -1,12 +1,13 @@
 extends Node2D
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	$Fish.onFinished.connect(func(): print("hello"))
-	pass # Replace with function body.
+	VarManager.on_data_changed.connect(_on_var_changed)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _on_var_changed(path: String, new_val, old_val):
+	if path == Varkey.B_IS_ENDING:
+		_ending()
+
+func _ending():
+	# show popup
 	pass
