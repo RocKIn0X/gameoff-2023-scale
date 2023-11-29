@@ -8,7 +8,7 @@ script = ExtResource("1_sefc0")
 
 [node name="Point" type="Label" parent="."]
 layout_direction = 2
-offset_top = -32.0
+offset_top = -41.0
 offset_right = 216.0
 offset_bottom = 199.0
 theme_override_fonts/font = ExtResource("2_fn6ip")
@@ -22,6 +22,6 @@ offset_top = 120.0
 offset_right = 380.0
 offset_bottom = 291.0
 theme_override_fonts/font = ExtResource("2_fn6ip")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 63
 text = "SCORE"
 vertical_alignment = 1
