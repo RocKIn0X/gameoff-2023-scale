@@ -26,10 +26,14 @@ var sfx_list: Array[AudioStream] = [
 func _ready():
 	bg_music.stream = load("res://Sources/Sounds/bgm.mp3")
 	bg_music.autoplay = true
+	bg_music.bus = "master"
+#	bg_music.volume_db = -15
+	print("bg volumn: ", str(bg_music.volume_db))
 	add_child(bg_music)
 	
 	for i in num_players:
 		var p = AudioStreamPlayer.new()
+		p.bus = "Sfx"
 		add_child(p)
 		available.append(p)
 		p.finished.connect(_on_stream_finished.bind(p))
