@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://bll2dhbn4kudn"]
+[gd_scene load_steps=16 format=3 uid="uid://bll2dhbn4kudn"]
 
 [ext_resource type="Script" path="res://Scripts/fish.gd" id="1_sxfui"]
 [ext_resource type="PackedScene" uid="uid://dtgo1qn2hptd3" path="res://Scenes/Scales/scale_fish2.tscn" id="2_m631r"]
 [ext_resource type="Script" path="res://Scripts/scales/scale_data.gd" id="3_ubedl"]
 [ext_resource type="PackedScene" uid="uid://cukng6kn3nnee" path="res://Scenes/Scales/scale_hard.tscn" id="4_qk4vr"]
+[ext_resource type="PackedScene" uid="uid://bfsujya8dsa32" path="res://Scenes/Scales/scale_time.tscn" id="5_02ox4"]
 [ext_resource type="Texture2D" uid="uid://cmn0twv2kgdy7" path="res://Sources/Sprites/Fish/2/Models/Fish_medium Meat_S01.png" id="5_h23js"]
 [ext_resource type="PackedScene" uid="uid://bwpsav601vpno" path="res://Scenes/ScaleHolder/scale_holder_2.tscn" id="6_goa5j"]
 [ext_resource type="Texture2D" uid="uid://c37lb2iro1djv" path="res://Sources/Sprites/Fish/2/Models/Fish_medium_S01_A1.png" id="7_qm3lx"]
@@ -13,14 +14,20 @@
 
 [sub_resource type="Resource" id="Resource_2qx34"]
 script = ExtResource("3_ubedl")
-rate = 75
+rate = 70
 scale = ExtResource("2_m631r")
 sharpness_cost = 0
 
 [sub_resource type="Resource" id="Resource_3iv8w"]
 script = ExtResource("3_ubedl")
-rate = 25
+rate = 20
 scale = ExtResource("4_qk4vr")
+sharpness_cost = 0
+
+[sub_resource type="Resource" id="Resource_36p12"]
+script = ExtResource("3_ubedl")
+rate = 10
+scale = ExtResource("5_02ox4")
 sharpness_cost = 0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kvrtg"]
@@ -53,7 +60,7 @@ position = Vector2(488, 328)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_sxfui")
 scaleParent = NodePath("Mask")
-fishScales = Array[ExtResource("3_ubedl")]([SubResource("Resource_2qx34"), SubResource("Resource_3iv8w")])
+fishScales = Array[ExtResource("3_ubedl")]([SubResource("Resource_2qx34"), SubResource("Resource_3iv8w"), SubResource("Resource_36p12")])
 
 [node name="Mask" type="Sprite2D" parent="."]
 clip_children = 2

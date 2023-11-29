@@ -1,11 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://d1vlq6maq1kfd"]
+[gd_scene load_steps=16 format=3 uid="uid://d1vlq6maq1kfd"]
 
 [ext_resource type="Script" path="res://Scripts/fish.gd" id="1_vwtou"]
 [ext_resource type="PackedScene" uid="uid://cydf1g38h8uup" path="res://Scenes/Scales/scale_fish5.tscn" id="2_os72q"]
 [ext_resource type="Script" path="res://Scripts/scales/scale_data.gd" id="3_t5xmi"]
 [ext_resource type="PackedScene" uid="uid://cukng6kn3nnee" path="res://Scenes/Scales/scale_hard.tscn" id="4_y77i5"]
+[ext_resource type="PackedScene" uid="uid://bfsujya8dsa32" path="res://Scenes/Scales/scale_time.tscn" id="5_6i75e"]
 [ext_resource type="Texture2D" uid="uid://mdxinlo6tip" path="res://Sources/Sprites/Fish/5/Fish_Biggest Meat_S01.png" id="5_c3ten"]
-[ext_resource type="PackedScene" path="res://Scenes/ScaleHolder/scale_holder_5.tscn" id="6_52ulk"]
+[ext_resource type="PackedScene" uid="uid://dns85l5p60sn2" path="res://Scenes/ScaleHolder/scale_holder_5.tscn" id="6_52ulk"]
 [ext_resource type="Texture2D" uid="uid://bp5bk6dvsx74d" path="res://Sources/Sprites/Fish/5/Fish_Biggest_complete_S01_A1.png" id="7_jd3go"]
 [ext_resource type="Texture2D" uid="uid://c05it75fygou0" path="res://Sources/Sprites/Fish/5/Fish_Biggest_complete_S01_A2.png" id="8_82g8h"]
 [ext_resource type="Texture2D" uid="uid://br7ig13ovps8t" path="res://Sources/Sprites/Fish/5/Fish_Biggest_S01_A1.png" id="9_h26pr"]
@@ -13,14 +14,20 @@
 
 [sub_resource type="Resource" id="Resource_2qx34"]
 script = ExtResource("3_t5xmi")
-rate = 75
+rate = 70
 scale = ExtResource("2_os72q")
 sharpness_cost = 0
 
 [sub_resource type="Resource" id="Resource_3iv8w"]
 script = ExtResource("3_t5xmi")
-rate = 25
+rate = 20
 scale = ExtResource("4_y77i5")
+sharpness_cost = 0
+
+[sub_resource type="Resource" id="Resource_ji668"]
+script = ExtResource("3_t5xmi")
+rate = 10
+scale = ExtResource("5_6i75e")
 sharpness_cost = 0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kvrtg"]
@@ -54,7 +61,7 @@ rotation = 0.0785398
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_vwtou")
 scaleParent = NodePath("Mask")
-fishScales = Array[ExtResource("3_t5xmi")]([SubResource("Resource_2qx34"), SubResource("Resource_3iv8w")])
+fishScales = Array[ExtResource("3_t5xmi")]([SubResource("Resource_2qx34"), SubResource("Resource_3iv8w"), SubResource("Resource_ji668")])
 
 [node name="Mask" type="Sprite2D" parent="."]
 clip_children = 2

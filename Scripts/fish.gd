@@ -27,8 +27,13 @@ func _setup_scale():
 
 func _remove_scale(scale):
 	scaleLeft -= 1;
-	var cur = VarManager.get_data(Varkey.F_SCORE_VAL);
-	VarManager.set_data(Varkey.F_SCORE_VAL, cur + scale.get_point());
+	match (scale.get_type()):
+		Scale.Type.Normal:
+			var cur = VarManager.get_data(Varkey.F_SCORE_VAL);
+			VarManager.set_data(Varkey.F_SCORE_VAL, cur + scale.get_point());
+		Scale.Type.AddTime:
+			var cur = VarManager.get_data(Varkey.F_TIMER_VAL);
+			VarManager.set_data(Varkey.F_TIMER_VAL, cur + scale.get_time_add());
 	if not VarManager.get_data(Varkey.B_IS_FEVER):
 		var new_fever = min(GameConst.F_FEVER_MAX, VarManager.get_data(Varkey.F_FEVER_VAL) + scale.get_point());
 		VarManager.set_data(Varkey.F_FEVER_VAL, new_fever);

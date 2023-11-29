@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dutvhlafcne2p"]
+[gd_scene load_steps=15 format=3 uid="uid://dutvhlafcne2p"]
 
 [ext_resource type="Script" path="res://Scripts/fish.gd" id="1_jh4lm"]
 [ext_resource type="Texture2D" uid="uid://bsgmbtl404laa" path="res://Sources/Sprites/Fish/1/Models/Fish Meat_S01.png" id="2_54tpf"]
@@ -8,18 +8,25 @@
 [ext_resource type="Texture2D" uid="uid://cy8j601l54dxq" path="res://Sources/Sprites/Fish/1/Models/Fish_normal_S01_A1.png" id="3_mqak3"]
 [ext_resource type="PackedScene" uid="uid://cukng6kn3nnee" path="res://Scenes/Scales/scale_hard.tscn" id="4_vwxoa"]
 [ext_resource type="Texture2D" uid="uid://cb8tnoju1p8fb" path="res://Sources/Sprites/Fish/1/Models/Fish_normal_S01_A2.png" id="5_dxf0k"]
+[ext_resource type="PackedScene" uid="uid://bfsujya8dsa32" path="res://Scenes/Scales/scale_time.tscn" id="5_m55ne"]
 [ext_resource type="Texture2D" uid="uid://dyo6gocox8yjb" path="res://Sources/Sprites/Fish/1/Models/Fish_complete_S01_A1.png" id="9_lycuv"]
 
 [sub_resource type="Resource" id="Resource_2qx34"]
 script = ExtResource("3_m1pwc")
-rate = 75
+rate = 70
 scale = ExtResource("2_yepjh")
 sharpness_cost = 0
 
 [sub_resource type="Resource" id="Resource_3iv8w"]
 script = ExtResource("3_m1pwc")
-rate = 25
+rate = 20
 scale = ExtResource("4_vwxoa")
+sharpness_cost = 0
+
+[sub_resource type="Resource" id="Resource_7dul2"]
+script = ExtResource("3_m1pwc")
+rate = 10
+scale = ExtResource("5_m55ne")
 sharpness_cost = 0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c1x7b"]
@@ -49,7 +56,7 @@ position = Vector2(488, 328)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_jh4lm")
 scaleParent = NodePath("Mask")
-fishScales = Array[ExtResource("3_m1pwc")]([SubResource("Resource_2qx34"), SubResource("Resource_3iv8w")])
+fishScales = Array[ExtResource("3_m1pwc")]([SubResource("Resource_2qx34"), SubResource("Resource_3iv8w"), SubResource("Resource_7dul2")])
 
 [node name="Mask" type="Sprite2D" parent="."]
 clip_children = 2

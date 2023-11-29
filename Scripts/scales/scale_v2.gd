@@ -4,8 +4,12 @@ class_name Scale
 
 signal onDestroy(scale)
 
+enum Type { Normal, AddTime }
+
+@export var type: Type
 @export var health: int = 2;
 @export var point: int = 1; 
+@export var time_add: int = 15;
 @export var sharpness_cost: int = 1;
 @export var hit_blink_ms: int = 500;
 @export var hit_color: Color
@@ -18,11 +22,14 @@ var is_fx := false
 var hit_time: float
 var trail : Node
 var point_fx : Node
+var time_prefab := preload("res://Scenes/Effects/add_time_effect.tscn")
 
 func _ready():
 	$AnimatedSprite2D.play("idle")
 
 func get_point(): return point;
+func get_type(): return type;
+func get_time_add(): return time_add;
 
 func hit():
 	if is_fx:
@@ -60,14 +67,21 @@ func _to_fx():
 	trail.tracked_object = self
 	trail.position = Vector2.ZERO
 	trail.global_position = Vector2.ZERO
-	point_fx = point_prefab.instantiate()
-	point_fx.points_val = get_point()
-	point_fx.position = Vector2.ZERO
-	point_fx.global_position = global_position
+	_point_fx()
 	$"..".add_child(trail)
 	$"/root".add_child(point_fx)
 	reparent(get_tree().root) # Override masking
 
+func _point_fx():
+	match (type):
+		Type.Normal:
+			point_fx = point_prefab.instantiate()
+			point_fx.points_val = get_point()
+		Type.AddTime:
+			point_fx = time_prefab.instantiate()
+	
+	point_fx.position = Vector2.ZERO
+	point_fx.global_position = global_position
 
 func _on_fx_done():
 	onDestroy.emit(self)

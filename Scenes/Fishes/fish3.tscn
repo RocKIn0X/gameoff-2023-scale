@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://dcjxjw0e1gu1r"]
+[gd_scene load_steps=16 format=3 uid="uid://dcjxjw0e1gu1r"]
 
 [ext_resource type="Script" path="res://Scripts/fish.gd" id="1_vwtou"]
 [ext_resource type="PackedScene" uid="uid://d20ljju6ksg4h" path="res://Scenes/Scales/scale_fish3.tscn" id="2_8enii"]
 [ext_resource type="Script" path="res://Scripts/scales/scale_data.gd" id="3_t5xmi"]
 [ext_resource type="PackedScene" uid="uid://cukng6kn3nnee" path="res://Scenes/Scales/scale_hard.tscn" id="4_y77i5"]
 [ext_resource type="Texture2D" uid="uid://hiru61rkxsvv" path="res://Sources/Sprites/Fish/3/Fish Mid_S01.png" id="5_310q5"]
+[ext_resource type="PackedScene" uid="uid://bfsujya8dsa32" path="res://Scenes/Scales/scale_time.tscn" id="5_ct24w"]
 [ext_resource type="PackedScene" uid="uid://dhrkixtahjts3" path="res://Scenes/ScaleHolder/scale_holder_3.tscn" id="6_0hkoa"]
 [ext_resource type="Texture2D" uid="uid://bx2jbidhkxrbw" path="res://Sources/Sprites/Fish/3/Fish_Mid_complete_S01_A1.png" id="7_yj5e5"]
 [ext_resource type="Texture2D" uid="uid://ckhvwbmweexsf" path="res://Sources/Sprites/Fish/3/Fish_Mid_complete_S01_A2.png" id="8_h2bkl"]
@@ -13,14 +14,20 @@
 
 [sub_resource type="Resource" id="Resource_2qx34"]
 script = ExtResource("3_t5xmi")
-rate = 75
+rate = 70
 scale = ExtResource("2_8enii")
 sharpness_cost = 0
 
 [sub_resource type="Resource" id="Resource_3iv8w"]
 script = ExtResource("3_t5xmi")
-rate = 25
+rate = 20
 scale = ExtResource("4_y77i5")
+sharpness_cost = 0
+
+[sub_resource type="Resource" id="Resource_twcvg"]
+script = ExtResource("3_t5xmi")
+rate = 10
+scale = ExtResource("5_ct24w")
 sharpness_cost = 0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kvrtg"]
@@ -53,7 +60,7 @@ position = Vector2(488, 328)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_vwtou")
 scaleParent = NodePath("Mask")
-fishScales = Array[ExtResource("3_t5xmi")]([SubResource("Resource_2qx34"), SubResource("Resource_3iv8w")])
+fishScales = Array[ExtResource("3_t5xmi")]([SubResource("Resource_2qx34"), SubResource("Resource_3iv8w"), SubResource("Resource_twcvg")])
 
 [node name="Mask" type="Sprite2D" parent="."]
 clip_children = 2

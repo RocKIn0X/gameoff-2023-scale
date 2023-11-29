@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://de50tbxp7j6nh"]
+
+[ext_resource type="Script" path="res://Scripts/effects/add_time_effect.gd" id="1_5iptd"]
+[ext_resource type="Texture2D" uid="uid://bqv2n3nw5m73p" path="res://Sources/Sprites/UI/Time_Ui.png" id="3_mgk58"]
+
+[node name="AddTimeEffect" type="Node2D" node_paths=PackedStringArray("time_icon")]
+script = ExtResource("1_5iptd")
+time_icon = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_mgk58")
