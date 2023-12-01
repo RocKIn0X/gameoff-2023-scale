@@ -9,6 +9,7 @@ func get_data(key: String):
 
 func set_data(key: String, data):
 	var old_data = __data_store.get(key)
+	if old_data == data: return
 	__data_store[key] = data
 	on_data_changed.emit(key, data, old_data)
 	return __data_store[key]
