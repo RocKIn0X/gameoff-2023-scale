@@ -76,7 +76,8 @@ func _point_fx():
 	match (type):
 		Type.Normal:
 			point_fx = point_prefab.instantiate()
-			point_fx.points_val = get_point()
+			var fish_count = VarManager.get_data(Varkey.I_FISH_FEVER_COUNT)
+			point_fx.points_val = get_point() * fish_count
 		Type.AddTime:
 			point_fx = time_prefab.instantiate()
 	

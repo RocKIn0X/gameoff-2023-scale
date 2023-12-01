@@ -27,19 +27,23 @@ func _setup_scale():
 
 func _remove_scale(scale):
 	scaleLeft -= 1;
+	var fish_count = VarManager.get_data(Varkey.I_FISH_FEVER_COUNT)
 	match (scale.get_type()):
 		Scale.Type.Normal:
 			var cur = VarManager.get_data(Varkey.F_SCORE_VAL);
-			VarManager.set_data(Varkey.F_SCORE_VAL, cur + scale.get_point());
+			VarManager.set_data(Varkey.F_SCORE_VAL, cur + scale.get_point() * fish_count);
 		Scale.Type.AddTime:
 			var cur = VarManager.get_data(Varkey.F_TIMER_VAL);
-			VarManager.set_data(Varkey.F_TIMER_VAL, cur + scale.get_time_add());
+			VarManager.set_data(Varkey.F_TIMER_VAL, cur + scale.get_time_add() * fish_count);
 	if not VarManager.get_data(Varkey.B_IS_FEVER):
 		var new_fever = min(GameConst.F_FEVER_MAX, VarManager.get_data(Varkey.F_FEVER_VAL) + scale.get_point());
 		VarManager.set_data(Varkey.F_FEVER_VAL, new_fever);
 		if new_fever >= GameConst.F_FEVER_MAX:
+			VarManager.set_data(Varkey.I_FISH_FEVER_COUNT, 1)
 			VarManager.set_data(Varkey.B_IS_FEVER, true);
 	if scaleLeft <= 0:
+		if VarManager.get_data(Varkey.B_IS_FEVER):
+			VarManager.set_data(Varkey.I_FISH_FEVER_COUNT, fish_count + 1)
 		var count = $AnimatedSprite2D.sprite_frames.get_frame_count("done")
 		$AnimatedSprite2D.play("done")
 		onFinished.emit(self);
