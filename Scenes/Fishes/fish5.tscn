@@ -14,7 +14,7 @@
 
 [sub_resource type="Resource" id="Resource_2qx34"]
 script = ExtResource("3_t5xmi")
-rate = 65
+rate = 70
 scale = ExtResource("2_os72q")
 sharpness_cost = 0
 
@@ -26,7 +26,7 @@ sharpness_cost = 0
 
 [sub_resource type="Resource" id="Resource_ji668"]
 script = ExtResource("3_t5xmi")
-rate = 10
+rate = 5
 scale = ExtResource("5_6i75e")
 sharpness_cost = 0
 
