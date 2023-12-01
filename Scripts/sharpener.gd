@@ -9,12 +9,19 @@ const SHARPNESS_KEY = Varkey.F_SHARPNESS_VAL
 @export var animated: AnimatedSprite2D
 
 var is_playing_sfx = false
+var is_pause = false
 
 func _ready():
 	hitbox.mouse_entered.connect(_on_mouse_entered)
 	hitbox.mouse_exited.connect(_on_mouse_left)
 	animated.play("default")
+	
+	VarManager.on_data_changed.connect(_on_data_changed)
 	#Debug.set_sharpness(0.0)
+
+func _on_data_changed(key, new_val, old_val):
+	if key == Varkey.B_IS_PAUSED or key == Varkey.B_IS_ENDING:
+		is_pause = new_val
 
 func _on_mouse_entered():
 	_is_tracking = true
@@ -24,6 +31,7 @@ func _on_mouse_left():
 	_is_tracking = false
 
 func _physics_process(delta):
+	if is_pause: return
 	if not _is_tracking:
 		return
 	var current_cursor_pos = get_viewport().get_mouse_position();

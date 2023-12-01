@@ -161,7 +161,7 @@ libraries = {
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimationPlayer"]
 position = Vector2(980, 505)
-texture = ExtResource("12_tmj2i")
+texture = ExtResource("13_om61p")
 
 [node name="Label" type="Label" parent="AnimationPlayer"]
 offset_left = 460.0
