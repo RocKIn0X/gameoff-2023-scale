@@ -1,8 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1mjthp8wllay"]
+[gd_scene load_steps=7 format=3 uid="uid://b1mjthp8wllay"]
 
 [ext_resource type="Texture2D" uid="uid://e1lahhsvmb0h" path="res://Sources/Sprites/UI/Time Fever_T3_Ui.png" id="1_2qmql"]
 [ext_resource type="Script" path="res://Scripts/fever_gauge.gd" id="1_xb37m"]
 [ext_resource type="FontFile" uid="uid://dqp4nvjk7nnxx" path="res://Sources/Fonts/Kodchasan-Bold.ttf" id="3_jmf1u"]
+[ext_resource type="Texture2D" uid="uid://dk8rxjktibwnb" path="res://Sources/Sprites/Effects/EFF_Time Fever_A01.png" id="4_kjrls"]
+[ext_resource type="Texture2D" uid="uid://bokqjdajibnux" path="res://Sources/Sprites/Effects/EFF_Time Fever_A02.png" id="5_t67iq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_28t8n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_kjrls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_t67iq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="FeverGauge" type="TextureProgressBar"]
 max_value = 10000.0
@@ -17,7 +33,12 @@ offset_left = 885.0
 offset_top = 32.0
 offset_right = 1012.0
 offset_bottom = 81.0
-theme_override_colors/font_color = Color(0.6, 0.172549, 0.482353, 1)
+theme_override_colors/font_color = Color(0.419608, 0.313726, 0.231373, 1)
 theme_override_fonts/font = ExtResource("3_jmf1u")
 theme_override_font_sizes/font_size = 35
 text = "FEVER"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Label"]
+position = Vector2(-362, 26)
+sprite_frames = SubResource("SpriteFrames_28t8n")
+autoplay = "default"
