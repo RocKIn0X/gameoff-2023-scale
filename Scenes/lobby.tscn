@@ -196,6 +196,7 @@ text = "Credits
 flat = true
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0.294118, 0.294118, 0.294118, 1)
 theme_override_colors/font_pressed_color = Color(0.294118, 0.294118, 0.294118, 1)
