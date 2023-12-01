@@ -10,4 +10,4 @@ func _reset_val():
 	VarManager.set_data(Varkey.F_FEVER_VAL, 0.0);
 	VarManager.set_data(Varkey.B_IS_FEVER, false);
 	VarManager.set_data(Varkey.B_IS_PAUSED, false);
-	VarManager.set_data(Varkey.B_IS_ENDING, false);
+	VarManager.set_data(Varkey.B_IS_ENDING, true);

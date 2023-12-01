@@ -1,0 +1,229 @@
+[gd_scene load_steps=30 format=3 uid="uid://c7abxvqlbtqgt"]
+
+[ext_resource type="Script" path="res://Scripts/UI/start_overlay.gd" id="1_jslox"]
+[ext_resource type="Texture2D" uid="uid://bydqoyx7layg" path="res://Sources/Sprites/UI/Button/Animation_spoon_strat game_A1.png" id="1_nqabq"]
+[ext_resource type="Texture2D" uid="uid://b2t5l8lluw8ka" path="res://Sources/Sprites/UI/Button/Animation_spoon_strat game_A2.png" id="2_y21r4"]
+[ext_resource type="Texture2D" uid="uid://bvb425fgsi3h1" path="res://Sources/Sprites/UI/Button/Animation_spoon_strat game_A3.png" id="3_flrhq"]
+[ext_resource type="Texture2D" uid="uid://dkh34fc7lvtl4" path="res://Sources/Sprites/UI/Button/Animation_spoon_strat game_A4.png" id="4_g2y74"]
+[ext_resource type="Texture2D" uid="uid://bwukouehbfpq6" path="res://Sources/Sprites/UI/Button/Animation_spoon_strat game_A5.png" id="5_n1gdu"]
+[ext_resource type="Texture2D" uid="uid://db34glyk7w6pm" path="res://Sources/Sprites/UI/Button/Animation_spoon_strat game_A6.png" id="6_lor07"]
+[ext_resource type="Texture2D" uid="uid://cxea1fa6ir5m2" path="res://Sources/Sprites/UI/Button/Animation_paper_A1.png" id="7_aowwf"]
+[ext_resource type="Texture2D" uid="uid://dmn6h4ayv7mp0" path="res://Sources/Sprites/UI/Button/Animation_paper_A2.png" id="8_udaqp"]
+[ext_resource type="Texture2D" uid="uid://bg1ufub86swbv" path="res://Sources/Sprites/UI/Button/Animation_paper_A3.png" id="9_g35c0"]
+[ext_resource type="Texture2D" uid="uid://rla8tp3uxxag" path="res://Sources/Sprites/UI/Button/Animation_paper_A4.png" id="10_21qe2"]
+[ext_resource type="Texture2D" uid="uid://kmrsq66fdxjr" path="res://Sources/Sprites/UI/Button/Animation_paper_A5.png" id="11_2wmlt"]
+[ext_resource type="Texture2D" uid="uid://bskht83r36l21" path="res://Sources/Sprites/UI/Button/Button_paper_A2.png" id="12_tmj2i"]
+[ext_resource type="Texture2D" uid="uid://c3fjbipfwkovg" path="res://Sources/Sprites/UI/Button/Button_paper_A1.png" id="13_om61p"]
+[ext_resource type="FontFile" uid="uid://dqp4nvjk7nnxx" path="res://Sources/Fonts/Kodchasan-Bold.ttf" id="14_smes5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bxl3e"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v0gjo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nqabq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_y21r4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_flrhq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_g2y74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_n1gdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lor07")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="Animation" id="Animation_ogrlx"]
+resource_name = "idle"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("12_tmj2i"), ExtResource("13_om61p")]
+}
+
+[sub_resource type="Animation" id="Animation_6jxuc"]
+resource_name = "open"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("7_aowwf"), ExtResource("8_udaqp"), ExtResource("9_g35c0"), ExtResource("10_21qe2"), ExtResource("11_2wmlt")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Label:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3uwxr"]
+resource_name = "empty"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Label:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hke4g"]
+resource_name = "hide"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Label:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_230v7"]
+_data = {
+"empty": SubResource("Animation_3uwxr"),
+"hide": SubResource("Animation_hke4g"),
+"idle": SubResource("Animation_ogrlx"),
+"open": SubResource("Animation_6jxuc")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5cspg"]
+animation = &"empty"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mj37x"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gj0l5"]
+animation = &"open"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_cukt8"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_51mvj"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ngfgc"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_e7fo5"]
+states/Start/position = Vector2(197, 100)
+states/empty/node = SubResource("AnimationNodeAnimation_5cspg")
+states/empty/position = Vector2(320, 77)
+states/idle/node = SubResource("AnimationNodeAnimation_mj37x")
+states/idle/position = Vector2(582, 138)
+states/open/node = SubResource("AnimationNodeAnimation_gj0l5")
+states/open/position = Vector2(419, 138)
+transitions = ["open", "idle", SubResource("AnimationNodeStateMachineTransition_cukt8"), "Start", "empty", SubResource("AnimationNodeStateMachineTransition_51mvj"), "empty", "open", SubResource("AnimationNodeStateMachineTransition_ngfgc")]
+
+[node name="StartOverlay" type="Node2D" node_paths=PackedStringArray("animation")]
+script = ExtResource("1_jslox")
+animation = NodePath("AnimationTree")
+
+[node name="Spoon" type="Button" parent="."]
+offset_left = 704.0
+offset_top = 809.0
+offset_right = 1213.0
+offset_bottom = 962.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bxl3e")
+flat = true
+
+[node name="Spoon" type="AnimatedSprite2D" parent="Spoon"]
+position = Vector2(263, 79)
+sprite_frames = SubResource("SpriteFrames_v0gjo")
+autoplay = "default"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_230v7")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(980, 505)
+texture = ExtResource("12_tmj2i")
+
+[node name="Label" type="Label" parent="AnimationPlayer"]
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 460.0
+offset_top = 387.0
+offset_right = 1505.0
+offset_bottom = 516.0
+theme_override_colors/font_color = Color(0.431373, 0.313726, 0.27451, 1)
+theme_override_fonts/font = ExtResource("14_smes5")
+theme_override_font_sizes/font_size = 96
+text = "Grab a spoon to start"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_e7fo5")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+
+[connection signal="button_up" from="Spoon" to="." method="_on_spoon_button_up"]

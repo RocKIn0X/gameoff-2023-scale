@@ -13,12 +13,15 @@ func _ready():
 
 func _on_var_changed(path: String, new_val, old_val):
 	if path == Varkey.B_IS_ENDING:
-		_on_ending()
+		_on_ending(new_val)
 	elif path == Varkey.F_SCORE_VAL:
 		_on_update_score(new_val)
 
-func _on_ending():
-	show()
+func _on_ending(is_ending):
+	if is_ending:
+		show()
+	else:
+		hide()
 
 func _on_update_score(point):
 	score.text = str(point)

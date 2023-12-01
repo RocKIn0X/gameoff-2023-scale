@@ -23,11 +23,16 @@ func _ready():
 	for i in range(orderLength):
 		var fish = fishes[gacha.random()]
 		order.append(fish)
-	next()
 
 func _on_var_changed(path: String, new_val, old_val):
 	if path == Varkey.B_IS_PAUSED:
 		_pause(new_val)
+	if path == Varkey.B_IS_ENDING:
+		_start(new_val)
+
+func _start(is_ending):
+	if !is_ending: next()
+	else: if tween: tween.pause()
 
 func _pause(is_paused):
 	if !tween: return

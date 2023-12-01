@@ -6,7 +6,11 @@ var stored_points: Array
 @export var fever_gradiant: Gradient
 @export var normal_gradiant: Gradient
 
+var is_pause: bool
+
 func _physics_process(_delta: float) -> void:
+	if is_pause: return
+	
 	if stored_points.size() > MAX_LENGTH:
 		_remove_trail_tail()
 		
@@ -24,6 +28,7 @@ func _append_trail_head(pos: Vector2):
 
 
 func _ready():
+	is_pause = true
 	reparent(get_tree().root, false)
 	global_position = Vector2.ZERO
 	VarManager.on_data_changed.connect(_on_var_changed)
@@ -33,6 +38,11 @@ func _ready():
 func _on_var_changed(path: String, new_val, old_val):
 	if path == Varkey.B_IS_FEVER:
 		_on_fever_changed(new_val)
+	if path == Varkey.B_IS_ENDING:
+		_set_pause(new_val)
+
+func _set_pause(pause):
+	is_pause = pause
 
 
 func _on_fever_changed(new_fever: bool):
