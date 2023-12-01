@@ -20,13 +20,13 @@ sharpness_cost = 0
 
 [sub_resource type="Resource" id="Resource_3iv8w"]
 script = ExtResource("3_ubedl")
-rate = 20
+rate = 25
 scale = ExtResource("4_qk4vr")
 sharpness_cost = 0
 
 [sub_resource type="Resource" id="Resource_36p12"]
 script = ExtResource("3_ubedl")
-rate = 10
+rate = 5
 scale = ExtResource("5_02ox4")
 sharpness_cost = 0
 
