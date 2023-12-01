@@ -12,7 +12,7 @@ func _on_quit_pressed():
 func _on_how_to_play_pressed():
 	tween = create_tween()
 	tween.tween_callback(_on_tween_how_to_play_complete)
-	tween.tween_property($HowToPlay, "position:x", 668, 0.3)
+	tween.tween_property($HowToPlay, "position:x", 660, 0.3)
 
 func _on_close_how_to_play_pressed():
 	get_node("HowToPlay/CloseHowToPlay").hide()
@@ -25,7 +25,7 @@ func _on_tween_how_to_play_complete():
 func _on_credits_pressed():
 	tween = create_tween()
 	tween.tween_callback(_on_tween_credits_complete)
-	tween.tween_property($Credits, "position:x", 668, 0.3)
+	tween.tween_property($Credits, "position:x", 660, 0.3)
 	
 func _on_close_credits_pressed():
 	get_node("Credits/CloseCredits").hide()
