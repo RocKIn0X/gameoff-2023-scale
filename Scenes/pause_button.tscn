@@ -1,15 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://kckbn0iyydws"]
 
-[ext_resource type="Texture2D" uid="uid://bp6kwe1p1ahps" path="res://Sources/Sprites/Fish/1/Scales/Fish Scales_A1_N_R.png" id="1_13yj0"]
-[ext_resource type="Texture2D" uid="uid://b263slfqa6grb" path="res://Sources/Sprites/Fish/1/Scales/Fish Scales_A1_N_SSR.png" id="2_jnrfw"]
+[ext_resource type="Texture2D" uid="uid://cg2gy3qljhhoo" path="res://Sources/Sprites/UI/Icon/Icon_Pause.png" id="1_qqo4r"]
+[ext_resource type="Texture2D" uid="uid://4hhbiin0a5vy" path="res://Sources/Sprites/UI/Icon/Icon_Play.png" id="2_4jr4c"]
 [ext_resource type="Script" path="res://Scripts/UI/pause_button.gd" id="3_dk2ab"]
 
 [node name="PauseButton" type="TextureButton"]
 offset_right = 44.0
 offset_bottom = 24.0
 toggle_mode = true
-texture_normal = ExtResource("1_13yj0")
-texture_pressed = ExtResource("2_jnrfw")
+texture_normal = ExtResource("1_qqo4r")
+texture_pressed = ExtResource("2_4jr4c")
 script = ExtResource("3_dk2ab")
 
 [connection signal="toggled" from="." to="." method="_on_toggled"]
