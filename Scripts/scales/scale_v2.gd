@@ -38,7 +38,7 @@ func hit():
 	var is_ending = VarManager.get_data(Varkey.B_IS_ENDING);
 	if is_paused or is_ending: return
 	var current_sharpness = VarManager.get_data(Varkey.F_SHARPNESS_VAL);
-	if current_sharpness <= 0: return
+	if current_sharpness <= 0 and not VarManager.get_data(Varkey.B_IS_FEVER): return
 	health -= GameCalculation.get_attack_power()
 	hit_time = Time.get_unix_time_from_system()
 	if not VarManager.get_data(Varkey.B_IS_FEVER):
