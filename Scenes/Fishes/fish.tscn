@@ -175,11 +175,11 @@ position = Vector2(174, -130)
 rotation = 0.736529
 
 [node name="Scale41" parent="Mask" instance=ExtResource("3_lykm3")]
-position = Vector2(78, -39)
+position = Vector2(86, -18)
 rotation = 0.736529
 
 [node name="Scale42" parent="Mask" instance=ExtResource("3_lykm3")]
-position = Vector2(26, 19)
+position = Vector2(32, 22)
 rotation = 0.856957
 
 [node name="Scale43" parent="Mask" instance=ExtResource("3_lykm3")]
@@ -199,19 +199,19 @@ position = Vector2(205, -250)
 rotation = 0.617847
 
 [node name="Scale47" parent="Mask" instance=ExtResource("3_lykm3")]
-position = Vector2(160, -190)
+position = Vector2(178, -204)
 rotation = 0.497419
 
 [node name="Scale48" parent="Mask" instance=ExtResource("3_lykm3")]
-position = Vector2(118, -127)
+position = Vector2(128, -176)
 rotation = 0.497419
 
 [node name="Scale60" parent="Mask" instance=ExtResource("3_lykm3")]
-position = Vector2(85, -90)
+position = Vector2(74, -64)
 rotation = 0.736529
 
 [node name="Scale59" parent="Mask" instance=ExtResource("3_lykm3")]
-position = Vector2(23, -34)
+position = Vector2(16, -24)
 rotation = 0.736529
 
 [node name="Scale49" parent="Mask" instance=ExtResource("3_lykm3")]
@@ -247,11 +247,11 @@ position = Vector2(-289, 19)
 rotation = 1.09607
 
 [node name="Scale57" parent="Mask" instance=ExtResource("3_lykm3")]
-position = Vector2(108, -335)
+position = Vector2(126, -318)
 rotation = 0.137881
 
 [node name="Scale58" parent="Mask" instance=ExtResource("3_lykm3")]
-position = Vector2(42, -388)
+position = Vector2(78, -366)
 rotation = 0.137881
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

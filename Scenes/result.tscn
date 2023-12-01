@@ -90,10 +90,10 @@ horizontal_alignment = 1
 
 [node name="Restart" type="Button" parent="."]
 offset_left = 776.0
-offset_top = 640.0
+offset_top = 636.0
 offset_right = 1155.0
-offset_bottom = 774.0
-theme_override_colors/font_color = Color(0.513726, 0.513726, 0.513726, 1)
+offset_bottom = 770.0
+theme_override_colors/font_color = Color(0.4, 0.290196, 0.231373, 1)
 theme_override_fonts/font = ExtResource("1_pofn7")
 theme_override_font_sizes/font_size = 96
 theme_override_styles/focus = SubResource("StyleBoxEmpty_h6vsb")
@@ -105,7 +105,7 @@ offset_left = 704.0
 offset_top = 832.0
 offset_right = 1245.0
 offset_bottom = 966.0
-theme_override_colors/font_color = Color(0.513726, 0.513726, 0.513726, 1)
+theme_override_colors/font_color = Color(0.407843, 0.313726, 0.301961, 1)
 theme_override_fonts/font = ExtResource("1_pofn7")
 theme_override_font_sizes/font_size = 96
 theme_override_styles/focus = SubResource("StyleBoxEmpty_h6vsb")

@@ -263,7 +263,7 @@ position = Vector2(-300, 134)
 rotation = 1.98269
 
 [node name="ScaleHolder51" parent="Mask" instance=ExtResource("6_goa5j")]
-position = Vector2(266, -128)
+position = Vector2(268, -118)
 rotation = 0.905826
 
 [node name="ScaleHolder52" parent="Mask" instance=ExtResource("6_goa5j")]
