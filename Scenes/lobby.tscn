@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://f5a5t2fklaco"]
+[gd_scene load_steps=25 format=3 uid="uid://f5a5t2fklaco"]
 
 [ext_resource type="Texture2D" uid="uid://cwffeb3q76t2h" path="res://Sources/Sprites/UI/Lobby/BG_001.png" id="1_ubyuo"]
 [ext_resource type="Script" path="res://Scripts/UI/lobby.gd" id="1_uuehx"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://ctdbq4m4uub4o" path="res://Sources/Sprites/UI/Lobby/LOGO_A02.png" id="8_npvo2"]
 [ext_resource type="Texture2D" uid="uid://cvnklr2tdeafh" path="res://Sources/Sprites/UI/Lobby/How To Play_A01.png" id="12_yesaq"]
 [ext_resource type="Texture2D" uid="uid://cmxoo05cq4tak" path="res://Sources/Sprites/UI/Lobby/How To Play_A02.png" id="13_8qrmh"]
+[ext_resource type="Texture2D" uid="uid://djmcxcgdjjl0h" path="res://Sources/Sprites/UI/Lobby/Credit_A01.png" id="14_618rg"]
+[ext_resource type="Texture2D" uid="uid://cku4jtvpvb23t" path="res://Sources/Sprites/UI/Lobby/Credit_A02.png" id="15_1wre6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oylpa"]
 animations = [{
@@ -91,6 +93,18 @@ animations = [{
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_57oxx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qdk88"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_618rg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1wre6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Lobby" type="CanvasLayer"]
 script = ExtResource("1_uuehx")
