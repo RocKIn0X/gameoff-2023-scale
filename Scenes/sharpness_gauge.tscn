@@ -1,11 +1,49 @@
-[gd_scene load_steps=7 format=3 uid="uid://cc4sm3t5auifs"]
+[gd_scene load_steps=12 format=3 uid="uid://cc4sm3t5auifs"]
 
 [ext_resource type="Script" path="res://Scripts/sharpness_gauge.gd" id="1_gb0rm"]
 [ext_resource type="Texture2D" uid="uid://cm0xfn5xhjiai" path="res://Sources/Sprites/UI/knife sharpness_T5_Ui.png" id="2_kq1bx"]
 [ext_resource type="Texture2D" uid="uid://ccwisb74fo4v2" path="res://Sources/Sprites/UI/knife sharpness_T3_Ui.png" id="3_g2hsv"]
 [ext_resource type="Texture2D" uid="uid://b2wajephw4c5s" path="res://Sources/Sprites/UI/knife sharpness_T1_Skin.png" id="4_80i3b"]
 [ext_resource type="Texture2D" uid="uid://84eopg8u6u8t" path="res://Sources/Sprites/UI/knife sharpness_T4_Ui.png" id="4_nshsl"]
+[ext_resource type="Texture2D" uid="uid://e3d8bduo75ni" path="res://Sources/Sprites/Effects/EFF_knife sharpness_A01.png" id="4_tme8c"]
+[ext_resource type="Texture2D" uid="uid://cdtcs542ubg6x" path="res://Sources/Sprites/Effects/EFF_knife sharpness_A02.png" id="5_3d0nm"]
 [ext_resource type="Texture2D" uid="uid://bq0o774d2l1j" path="res://Sources/Sprites/UI/knife sharpness_T2_Skin.png" id="5_cnmp6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hmims"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_tme8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3d0nm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_xn5hf"]
+resource_name = "ProgressBar"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(19, 276), Vector2(19, -276)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kvigg"]
+_data = {
+"ProgressBar": SubResource("Animation_xn5hf")
+}
 
 [node name="SharpnessGauge" type="Node2D" node_paths=PackedStringArray("gauge_line", "gauge_bar")]
 script = ExtResource("1_gb0rm")
@@ -28,6 +66,7 @@ end_cap_mode = 2
 texture = ExtResource("2_kq1bx")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="KnifeSharpnessT5Ui"]
+clip_children = 2
 offset_left = -21.0
 offset_top = -258.0
 offset_right = 19.0
@@ -35,6 +74,17 @@ offset_bottom = 292.0
 value = 100.0
 fill_mode = 3
 texture_progress = ExtResource("4_nshsl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="KnifeSharpnessT5Ui/TextureProgressBar"]
+position = Vector2(19, -101.973)
+sprite_frames = SubResource("SpriteFrames_hmims")
+autoplay = "default"
+frame_progress = 0.165188
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="KnifeSharpnessT5Ui/TextureProgressBar/AnimatedSprite2D"]
+position = Vector2(0, 550)
+sprite_frames = SubResource("SpriteFrames_hmims")
+autoplay = "default"
 
 [node name="KnifeSharpnessT3Ui" type="Sprite2D" parent="KnifeSharpnessT5Ui"]
 texture = ExtResource("3_g2hsv")
@@ -44,3 +94,10 @@ texture = ExtResource("4_80i3b")
 
 [node name="KnifeSharpnessT2Skin" type="Sprite2D" parent="KnifeSharpnessT5Ui"]
 texture = ExtResource("5_cnmp6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="KnifeSharpnessT5Ui"]
+root_node = NodePath("../TextureProgressBar/AnimatedSprite2D")
+autoplay = "ProgressBar"
+libraries = {
+"": SubResource("AnimationLibrary_kvigg")
+}
