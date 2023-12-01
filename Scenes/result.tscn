@@ -54,7 +54,7 @@ sprite_frames = SubResource("SpriteFrames_axm55")
 autoplay = "default"
 
 [node name="ScoreText" type="Label" parent="."]
-modulate = Color(0.333333, 0.290196, 0.266667, 1)
+modulate = Color(0.184314, 0.152941, 0.117647, 1)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -73,7 +73,7 @@ horizontal_alignment = 1
 autowrap_mode = 1
 
 [node name="ScoreText2" type="Label" parent="."]
-modulate = Color(0.333333, 0.290196, 0.266667, 1)
+modulate = Color(0.184314, 0.152941, 0.117647, 1)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -87,7 +87,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_pofn7")
 theme_override_font_sizes/font_size = 128
-text = "100"
+text = "0"
 horizontal_alignment = 1
 
 [node name="Restart" type="Button" parent="."]
