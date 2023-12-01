@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://f5a5t2fklaco"]
+[gd_scene load_steps=23 format=3 uid="uid://f5a5t2fklaco"]
 
 [ext_resource type="Texture2D" uid="uid://cwffeb3q76t2h" path="res://Sources/Sprites/UI/Lobby/BG_001.png" id="1_ubyuo"]
 [ext_resource type="Script" path="res://Scripts/UI/lobby.gd" id="1_uuehx"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://cppmjppp1itx3" path="res://Sources/Sprites/UI/Lobby/Fish_BG_A02.png" id="6_305vv"]
 [ext_resource type="Texture2D" uid="uid://v11hetvon2vm" path="res://Sources/Sprites/UI/Lobby/LOGO_A01.png" id="7_46lbq"]
 [ext_resource type="Texture2D" uid="uid://ctdbq4m4uub4o" path="res://Sources/Sprites/UI/Lobby/LOGO_A02.png" id="8_npvo2"]
+[ext_resource type="Texture2D" uid="uid://cvnklr2tdeafh" path="res://Sources/Sprites/UI/Lobby/How To Play_A01.png" id="12_yesaq"]
+[ext_resource type="Texture2D" uid="uid://cmxoo05cq4tak" path="res://Sources/Sprites/UI/Lobby/How To Play_A02.png" id="13_8qrmh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oylpa"]
 animations = [{
@@ -71,6 +73,24 @@ animations = [{
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q47cw"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j58xy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h4ah1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_yesaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8qrmh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_57oxx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qdk88"]
 
 [node name="Lobby" type="CanvasLayer"]
 script = ExtResource("1_uuehx")
@@ -166,5 +186,38 @@ text = "Quit
 "
 flat = true
 
+[node name="HowToPlay" type="AnimatedSprite2D" parent="."]
+position = Vector2(-700, 540)
+sprite_frames = SubResource("SpriteFrames_h4ah1")
+autoplay = "default"
+frame_progress = 0.0368929
+
+[node name="CloseHowToPlay" type="Button" parent="HowToPlay"]
+visible = false
+offset_left = -668.0
+offset_top = -541.0
+offset_right = 1620.0
+offset_bottom = 530.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_57oxx")
+flat = true
+
+[node name="Credits" type="AnimatedSprite2D" parent="."]
+position = Vector2(-700, 540)
+sprite_frames = SubResource("SpriteFrames_qdk88")
+autoplay = "default"
+
+[node name="CloseCredits" type="Button" parent="Credits"]
+visible = false
+offset_left = -668.0
+offset_top = -541.0
+offset_right = 1620.0
+offset_bottom = 530.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_57oxx")
+flat = true
+
 [connection signal="pressed" from="VBoxContainer/Play/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/HowToPlay" to="." method="_on_how_to_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="HowToPlay/CloseHowToPlay" to="." method="_on_close_how_to_play_pressed"]
+[connection signal="pressed" from="Credits/CloseCredits" to="." method="_on_close_credits_pressed"]
