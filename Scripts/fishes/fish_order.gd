@@ -3,6 +3,7 @@ extends Node2D
 @export var fishes: Array[FishData];
 @export var orderLength = 4
 @export var board: Node2D;
+@export var rails: Node2D;
 
 var gacha: Gacha;
 var order: Array[FishData]
@@ -11,6 +12,7 @@ var spawn_pos: Vector2
 var center_pos: Vector2
 var finish_pos: Vector2
 var tween: Tween
+var rail_tween: Tween
 
 func _ready():
 	VarManager.on_data_changed.connect(_on_var_changed)
@@ -32,12 +34,18 @@ func _on_var_changed(path: String, new_val, old_val):
 
 func _start(is_ending):
 	if !is_ending: next()
-	else: if tween: tween.pause()
+	else:
+		if tween: tween.pause()
+		if rail_tween: rail_tween.pause()
 
 func _pause(is_paused):
-	if !tween: return
-	if is_paused: tween.pause()
-	else: tween.play()
+	if tween:
+		if is_paused: tween.pause()
+		else: tween.play()
+		
+	if rail_tween:
+		if is_paused: rail_tween.pause()
+		else: rail_tween.pause()
 
 func next():
 	var current = pop().instantiate()
@@ -50,6 +58,11 @@ func next():
 	tween.tween_callback(func():
 		current._setup_scale()
 		tween = null)
+	rails.position = spawn_pos;
+	rail_tween = create_tween()
+	rail_tween.tween_property(rails, "position", center_pos, 1)
+	rail_tween.tween_callback(func():
+		rail_tween = null)
 	SoundManager._play_sfx(SoundManager.SfxType.Swoosh)
 
 func pop():
@@ -65,4 +78,9 @@ func onFishFinished(fish):
 		fish.queue_free()
 		tween = null
 		next())
+	rail_tween = create_tween()
+	rail_tween.tween_property(rails, "position", finish_pos, 1)
+	rail_tween.tween_callback(func():
+		rails.position = spawn_pos;
+		rail_tween = null)
 	SoundManager._play_sfx(SoundManager.SfxType.Swoosh)
