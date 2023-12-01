@@ -1,7 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://bidpbctoqtw3j"]
+[gd_scene load_steps=8 format=3 uid="uid://bidpbctoqtw3j"]
 
 [ext_resource type="Texture2D" uid="uid://cuwamqi1ileb1" path="res://Sources/Sprites/UI/Time Fever_T4_Ui.png" id="1_1aelc"]
 [ext_resource type="Script" path="res://Scripts/UI/time_gauge.gd" id="2_2orwh"]
+[ext_resource type="Texture2D" uid="uid://dk8rxjktibwnb" path="res://Sources/Sprites/Effects/EFF_Time Fever_A01.png" id="3_0ugl3"]
+[ext_resource type="Texture2D" uid="uid://bokqjdajibnux" path="res://Sources/Sprites/Effects/EFF_Time Fever_A02.png" id="4_5bneg"]
+
+[sub_resource type="Animation" id="Animation_jbo7p"]
+resource_name = "Time Anima"
+length = 8.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(515, 56), Vector2(1545, 56)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6t2sb"]
+_data = {
+"Time Anima": SubResource("Animation_jbo7p")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mokam"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0ugl3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5bneg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="TimeGauge" type="TextureProgressBar"]
 offset_right = 40.0
@@ -10,3 +48,24 @@ max_value = 10000.0
 value = 10000.0
 texture_progress = ExtResource("1_1aelc")
 script = ExtResource("2_2orwh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimatedSprite2D")
+autoplay = "Time Anima"
+libraries = {
+"": SubResource("AnimationLibrary_6t2sb")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(515, 56)
+sprite_frames = SubResource("SpriteFrames_mokam")
+autoplay = "default"
+frame = 1
+frame_progress = 0.83404
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
+position = Vector2(-1046, 1)
+sprite_frames = SubResource("SpriteFrames_mokam")
+autoplay = "default"
+frame = 1
+frame_progress = 0.83404

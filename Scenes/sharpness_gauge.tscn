@@ -76,10 +76,10 @@ fill_mode = 3
 texture_progress = ExtResource("4_nshsl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="KnifeSharpnessT5Ui/TextureProgressBar"]
-position = Vector2(19, -101.973)
+position = Vector2(19, 276)
 sprite_frames = SubResource("SpriteFrames_hmims")
 autoplay = "default"
-frame_progress = 0.165188
+frame_progress = 0.417637
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="KnifeSharpnessT5Ui/TextureProgressBar/AnimatedSprite2D"]
 position = Vector2(0, 550)

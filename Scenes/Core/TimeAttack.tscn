@@ -41,6 +41,7 @@ texture = ExtResource("2_20gvr")
 texture = ExtResource("2_kko30")
 
 [node name="TimeGauge" parent="TimeFeverT2Ui" instance=ExtResource("4_esv53")]
+clip_children = 2
 offset_left = -611.0
 offset_top = -80.0
 offset_right = 420.0
