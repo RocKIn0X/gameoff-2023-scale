@@ -42,6 +42,7 @@ sprite_frames = SubResource("SpriteFrames_r6rqq")
 position = Vector2(1.99994, -2.5)
 scale = Vector2(0.999999, 0.999999)
 shape = SubResource("RectangleShape2D_l34mk")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="SharpnessGauge" parent="." instance=ExtResource("3_8yhdy")]
 visible = false
