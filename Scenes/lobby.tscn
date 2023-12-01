@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://f5a5t2fklaco"]
+[gd_scene load_steps=27 format=3 uid="uid://f5a5t2fklaco"]
 
 [ext_resource type="Texture2D" uid="uid://cwffeb3q76t2h" path="res://Sources/Sprites/UI/Lobby/BG_001.png" id="1_ubyuo"]
 [ext_resource type="Script" path="res://Scripts/UI/lobby.gd" id="1_uuehx"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cppmjppp1itx3" path="res://Sources/Sprites/UI/Lobby/Fish_BG_A02.png" id="6_305vv"]
 [ext_resource type="Texture2D" uid="uid://v11hetvon2vm" path="res://Sources/Sprites/UI/Lobby/LOGO_A01.png" id="7_46lbq"]
 [ext_resource type="Texture2D" uid="uid://ctdbq4m4uub4o" path="res://Sources/Sprites/UI/Lobby/LOGO_A02.png" id="8_npvo2"]
+[ext_resource type="Texture2D" uid="uid://da7djl5oy2gmm" path="res://Sources/Sprites/UI/Lobby/Text_BG_A02.png" id="11_qcyyy"]
 [ext_resource type="Texture2D" uid="uid://cvnklr2tdeafh" path="res://Sources/Sprites/UI/Lobby/How To Play_A01.png" id="12_yesaq"]
 [ext_resource type="Texture2D" uid="uid://cmxoo05cq4tak" path="res://Sources/Sprites/UI/Lobby/How To Play_A02.png" id="13_8qrmh"]
 [ext_resource type="Texture2D" uid="uid://djmcxcgdjjl0h" path="res://Sources/Sprites/UI/Lobby/Credit_A01.png" id="14_618rg"]
@@ -71,6 +72,13 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_rsriw"]
+frames = 2
+frame_0/texture = ExtResource("2_jg2ti")
+frame_0/duration = 0.3
+frame_1/texture = ExtResource("11_qcyyy")
+frame_1/duration = 0.3
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q47cw"]
 
@@ -145,7 +153,7 @@ grow_vertical = 2
 
 [node name="Play" type="TextureRect" parent="VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_jg2ti")
+texture = SubResource("AnimatedTexture_rsriw")
 
 [node name="Play" type="Button" parent="VBoxContainer/Play"]
 layout_mode = 2
