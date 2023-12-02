@@ -11,3 +11,4 @@ func _reset_val():
 	VarManager.set_data(Varkey.B_IS_FEVER, false);
 	VarManager.set_data(Varkey.B_IS_PAUSED, false);
 	VarManager.set_data(Varkey.B_IS_ENDING, true);
+	VarManager.set_data(Varkey.I_FISH_FEVER_COUNT, 1);

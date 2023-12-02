@@ -14,3 +14,4 @@ func _process(delta):
 		VarManager.set_data(Varkey.F_FEVER_VAL, new_fever)
 		if new_fever <= 0.0:
 			VarManager.set_data(Varkey.B_IS_FEVER, false)
+			VarManager.set_data(Varkey.I_FISH_FEVER_COUNT, 1)

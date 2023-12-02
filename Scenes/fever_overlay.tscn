@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c0w72qehlbb8r"]
+[gd_scene load_steps=13 format=3 uid="uid://c0w72qehlbb8r"]
 
 [ext_resource type="Script" path="res://Scripts/fever_overlay.gd" id="1_biag6"]
 [ext_resource type="Texture2D" uid="uid://cdbusj8jyi744" path="res://Sources/Sprites/Fever/Effect_A01.png" id="2_0rn1c"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://drhu64xosirla" path="res://Sources/Sprites/Fever/Fever_A04.png" id="7_qubuy"]
 [ext_resource type="Texture2D" uid="uid://bli61pd2lqs53" path="res://Sources/Sprites/Fever/Fever_A05.png" id="8_0wxsk"]
 [ext_resource type="Texture2D" uid="uid://bh2r6qqrejilw" path="res://Sources/Sprites/Fever/Fever_A06.png" id="9_eqx7m"]
+[ext_resource type="FontFile" uid="uid://dqp4nvjk7nnxx" path="res://Sources/Fonts/Kodchasan-Bold.ttf" id="10_ao6ou"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c0hr6"]
 animations = [{
@@ -50,8 +51,9 @@ animations = [{
 "speed": 8.0
 }]
 
-[node name="FeverOverlay" type="Node2D"]
+[node name="FeverOverlay" type="Node2D" node_paths=PackedStringArray("count_text")]
 script = ExtResource("1_biag6")
+count_text = NodePath("Fever/ScoreText2")
 
 [node name="Effect" type="AnimatedSprite2D" parent="."]
 position = Vector2(960, 540)
@@ -62,3 +64,26 @@ autoplay = "default"
 position = Vector2(954, 211)
 sprite_frames = SubResource("SpriteFrames_7lblk")
 autoplay = "default"
+
+[node name="ScoreText2" type="Label" parent="Fever"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -487.5
+offset_top = -142.0
+offset_right = -12.5
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.796078, 0.733333, 0.682353, 1)
+theme_override_colors/font_shadow_color = Color(0.25098, 0.215686, 0.188235, 1)
+theme_override_colors/font_outline_color = Color(0.317647, 0.278431, 0.243137, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("10_ao6ou")
+theme_override_font_sizes/font_size = 164
+text = "0"
+horizontal_alignment = 1
